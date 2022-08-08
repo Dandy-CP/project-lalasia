@@ -1,0 +1,18 @@
+.headerProductContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.headerTitle {
+  text-align: center;
+}
+
+.headerTitle h1 {
+  font-size: 64px;
+}
+
+.headerTitle p {
+  font-size: 18px;
+  width: 600px;
+}

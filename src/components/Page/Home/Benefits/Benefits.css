@@ -1,0 +1,96 @@
+.benefits {
+  padding: 100px;
+}
+
+.titledesc {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  width: 500px;
+}
+
+.title p {
+  color: #ffb23f;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.title h1 {
+  font-size: 44px;
+
+  margin-top: 0px;
+}
+
+.descbenefits {
+  width: 500px;
+}
+
+.descbenefits h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.boxcardbenefits {
+  display: flex;
+
+  padding-top: 20px;
+}
+
+@media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+  .benefits {
+    padding: 50px;
+  }
+
+  .titledesc {
+    flex-direction: column;
+  }
+
+  .boxcardbenefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+  }
+}
+
+@media screen and (max-device-width: 639px) {
+  .benefits {
+    padding: 10px;
+    padding-top: 100px;
+  }
+
+  .titledesc {
+    flex-direction: column;
+  }
+
+  .title {
+    width: 300px;
+  }
+
+  .descbenefits {
+    width: 300px;
+  }
+
+  .boxcardbenefits {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding-top: 50px;
+  }
+
+  .title h1 {
+    font-size: 24px;
+
+    margin-top: 0px;
+  }
+
+  .descbenefits h3 {
+    font-size: 14px;
+    font-weight: 500;
+  }
+}

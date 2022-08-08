@@ -1,0 +1,41 @@
+.boxtesti {
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: white;
+
+  /* width: 550px; */
+  padding: 30px;
+  margin-right: 15px;
+  margin-bottom: 50px;
+}
+
+.boxtesti p {
+  font-size: 18px;
+}
+
+.avarate {
+  display: flex;
+  justify-content: space-between;
+}
+
+.namerate {
+  display: flex;
+  align-items: center;
+}
+
+.namerate h4 {
+  font-size: 20px;
+  margin: 0px;
+  margin-left: 20px;
+}
+
+.starrating {
+  display: flex;
+  align-items: center;
+}
+
+.starrating p {
+  margin-left: 10px;
+  font-weight: 700;
+}

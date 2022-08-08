@@ -1,0 +1,64 @@
+.Testimoni {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+.titletesti {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  margin-bottom: 50px;
+}
+
+.nametesti p {
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffb23f;
+
+  margin-bottom: 0px;
+}
+
+.nametesti h1 {
+  font-size: 44px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.desctesti {
+  width: 656px;
+}
+
+.desctesti h3 {
+  font-weight: 500;
+  font-size: 18px;
+  color: #afadb5;
+}
+
+.cardtesti {
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-device-width: 639px) {
+  .nametesti p {
+    font-size: 14px;
+  }
+
+  .nametesti h1 {
+    font-size: 24px;
+  }
+
+  .desctesti {
+    width: 300px;
+  }
+
+  .desctesti h3 {
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,51 @@
+.itemProduct {
+  transition: 0.5s;
+  border-radius: 20px;
+}
+
+.itemProduct a {
+  cursor: pointer;
+}
+
+.itemProduct:hover {
+  box-shadow: 0 10px 15px rgb(182, 182, 182);
+}
+
+.itemProduct img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  transition: transform 0.3s;
+}
+
+.itemProduct img:hover {
+  transform: scale(1.1);
+}
+
+.itemWraper a:hover {
+  border-bottom: none;
+}
+
+.itemWraper p {
+  font-size: 15px;
+  color: #afadb5;
+
+  margin-top: 5px;
+  margin-left: 10px;
+  margin-bottom: 0px;
+}
+
+.itemWraper h1 {
+  font-size: 25px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+
+  margin-left: 10px;
+}
+
+.itemWraper h2 {
+  font-size: 24px;
+
+  margin-top: 10px;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,210 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  padding-top: 50px;
+}
+
+.TitleWelcome {
+  width: 750px;
+}
+
+.TitleWelcome h1 {
+  text-align: center;
+  font-size: 64px;
+}
+
+.TitleWelcome p {
+  text-align: center;
+  font-size: 18px;
+}
+
+.Linearrow {
+  /* top: 40%; */
+  /* left: 5%; */
+  margin-left: -250px;
+  margin-top: -120px;
+  position: absolute;
+}
+
+.heroserachbar {
+  padding-top: 80px;
+}
+
+.searchbox {
+  padding-bottom: 10px;
+}
+
+.searchbox input {
+  /*   position: relative; */
+  box-sizing: border-box;
+  width: 810px;
+  height: 84px;
+
+  /*   top: 70%; */
+  /*   left: 20%; */
+
+  /* margin-left: 200px; */
+
+  border: none;
+}
+
+.searchbox input[type="text"] {
+  background-image: url("../../../assets/search-normal.png");
+  background-position: 30px 25px;
+  background-repeat: no-repeat;
+
+  font-size: 18px;
+
+  padding-left: 80px;
+}
+
+.searchbox button {
+  /*   position: absolute; */
+  width: 170px;
+  height: 84px;
+
+  /*   top: 72%; */
+  /* left: 63%; */
+
+  /*   margin-left: 820px; */
+
+  font-size: 18px;
+
+  color: white;
+  background-color: #518581;
+  border: none;
+
+  cursor: pointer;
+}
+
+.searchbox button:hover {
+  background-color: #5a948f;
+}
+
+@media screen and (min-width: 1920px) {
+  /*   .searchbox input {
+    top: 61%;
+  }
+
+  .searchbox button {
+    top: 62.5%;
+  } */
+}
+
+@media screen and (max-width: 1280px) {
+  /*   .searchbox input {
+    top: 79%;
+  }
+
+  .searchbox button {
+    top: 81%;
+  } */
+}
+
+@media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+  .TitleWelcome {
+    width: 550px;
+  }
+
+  .TitleWelcome h1 {
+    font-size: 50px;
+  }
+
+  .TitleWelcome p {
+    font-size: 16px;
+  }
+
+  .Linearrow {
+    margin-left: -120px;
+    margin-top: -260px;
+  }
+
+  .searchbox input {
+    width: 327px;
+    height: 70px;
+  }
+
+  .searchbox button {
+    width: 170px;
+    height: 70px;
+  }
+
+  .heroserachbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .heroserachbar img {
+    width: 90%;
+  }
+
+  .imgheaderdesktop {
+    width: 90%;
+  }
+}
+
+@media screen and (max-device-width: 639px) {
+  .TitleWelcome {
+    width: 300px;
+  }
+
+  .TitleWelcome h1 {
+    font-size: 26px;
+  }
+
+  .TitleWelcome p {
+    font-size: 14px;
+  }
+
+  .Linearrow {
+    margin-left: -80px;
+    margin-top: -110px;
+  }
+
+  h1 img {
+    width: 30px;
+  }
+
+  .Linearrow img {
+    width: 150px;
+  }
+
+  .searchbox {
+    display: flex;
+    justify-content: center;
+  }
+
+  .searchbox input {
+    width: 250px;
+    height: 70px;
+    top: 50%;
+    margin-left: 0px;
+  }
+
+  .searchbox input[type="text"] {
+    background-position: 20px 19px;
+    background-repeat: no-repeat;
+
+    font-size: 14px;
+
+    padding-left: 65px;
+  }
+
+  .searchbox button {
+    width: 100px;
+    height: 70px;
+  }
+
+  .heroserachbar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgheaderdesktop {
+    width: 90%;
+  }
+}

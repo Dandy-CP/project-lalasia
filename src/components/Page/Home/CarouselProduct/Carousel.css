@@ -1,0 +1,56 @@
+.carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  padding-top: 50px;
+}
+
+.titlecarousel {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.desccarausel {
+  width: 656px;
+}
+
+.titlecarousel h5 {
+  font-size: 18px;
+  font-weight: 700;
+
+  color: #ffb23f;
+  margin-bottom: 0px;
+}
+
+.titlecarousel h1 {
+  font-size: 44px;
+
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.titlecarousel p {
+  font-size: 18px;
+  color: #afadb5;
+}
+
+@media screen and (max-device-width: 639px) {
+  .titlecarousel h5 {
+    font-size: 14px;
+  }
+
+  .titlecarousel h1 {
+    font-size: 24px;
+  }
+
+  .titlecarousel p {
+    font-size: 14px;
+  }
+
+  .desccarausel {
+    width: 300px;
+  }
+}

@@ -1,0 +1,36 @@
+.HeaderImg img {
+  filter: contrast(70%);
+}
+
+.discountoffer {
+  box-sizing: border-box;
+  background-color: #518581;
+  width: 93px;
+  height: 41px;
+  border-radius: 16px;
+
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.textcarousel {
+  position: absolute;
+  width: 600px;
+  color: white;
+  top: 30%;
+
+  margin-left: 100px;
+  font-weight: 500;
+}
+
+.textcarousel h1 {
+  font-size: 44px;
+
+  margin-top: 0px;
+}
+
+.textcarousel h2 {
+  width: 400px;
+  font-size: 24px;
+}

@@ -1,0 +1,8 @@
+.CarouselImgContainer {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+.CarouselImgContainer img {
+  width: 100%;
+}
