@@ -1,0 +1,55 @@
+.containerProfile {
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+.userInfo {
+  margin-left: 290px;
+}
+
+.bannerUser {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bannerUser img {
+}
+
+.userAvatar {
+  position: absolute;
+  margin-top: 200px;
+  margin-left: 50px;
+}
+
+.userAvatar img {
+  width: 200px;
+  border-radius: 50%;
+}
+
+.titleSavedProduct {
+  text-align: center;
+  padding-top: 150px;
+  padding-bottom: 50px;
+}
+
+.userSavedProduct {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 150px;
+}
+
+.itemProduct {
+  margin-left: 20px;
+}
+
+.iconDeleteProduct {
+  float: inline-end;
+  margin-bottom: 20px;
+  margin-right: 20px;
+}
+
+.iconDeleteProduct:hover {
+  color: red;
+}

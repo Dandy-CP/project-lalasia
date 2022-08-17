@@ -11,7 +11,6 @@ function Routing() {
 
       <Outlet />
 
-      <hr width="86%" color="#ECE4DE" />
       <Footer />
     </React.Fragment>
   );

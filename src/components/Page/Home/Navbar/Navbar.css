@@ -6,39 +6,194 @@
   padding-bottom: 30px;
   padding-left: 100px;
   padding-right: 100px;
-
   background-color: white;
   border-bottom: 2px solid #f3f3f3;
 }
 
 .ListMenu {
   display: flex;
-  justify-content: center;
 }
 
-li {
+.Menu {
+  display: inline-block;
+  position: relative;
   list-style: none;
   margin-left: 30px;
 }
 
-a {
+.Menu a {
   color: black;
   font-weight: 500;
   font-size: 18px;
   text-decoration: none;
+  padding-bottom: 45px;
+}
 
+.Menu a:after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 3px;
+  bottom: -48px;
+  left: 0;
+  background-color: #518581;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.Menu a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+  /* border-bottom: 3px solid #518581; */
+}
+
+.Active {
+  border-bottom: 3px solid #518581;
+}
+
+.btnSignUp,
+.btnLogIn {
+  width: 90px;
+  height: 40px;
+  background-color: white;
+  border-radius: 5px;
+  border-color: 1px black;
+  border-width: 1px;
+  color: black;
+  cursor: pointer;
+  transition: 0.3s ease-in;
+}
+
+.btnLogIn {
+  border: none;
+  color: white;
+  background-color: #518581;
+  margin-left: 15px;
+}
+
+.btnSignUp {
+  border: 1px solid #518581;
+}
+
+.btnSignUp a,
+.btnLogIn a {
+  color: white;
+  text-decoration: none;
+}
+
+.btnSignUp a {
+  color: black;
+}
+
+.btnLogIn:hover {
+  background-color: #63a19c;
+}
+
+.btnSignUp:hover,
+.btnSignUp a:hover {
+  background-color: #518581;
+  color: white;
+}
+
+.btnUserCart {
+  background-color: white;
+  border: none;
+  margin-right: 30px;
+}
+
+.ButtonUserLogin {
+  display: flex;
+  align-items: center;
+}
+
+.ButtonUserLogin a {
+  text-decoration: none;
+}
+
+.btnUserAccount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  /*   width: 180px; */
+  height: 50px;
+
+  font-size: 15px;
+}
+
+.btnUserAccount a {
+  text-decoration: none;
+}
+
+.btnUserAccount img {
+  width: 40px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.dropDown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  right: -0%;
+  /* min-width: 160px; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent p {
+  text-align: center;
+  font-weight: 500;
+}
+
+.dropdownContent a {
+  width: 100px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
   padding-bottom: 5px;
 }
 
-a:hover {
-  border-bottom: 2px solid black;
+.dropDown:hover .dropdownContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
-.ButtonNav button {
-  background-color: transparent;
-  border: none;
+.profileBtn,
+.logOutBtn {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
   cursor: pointer;
-  margin-left: 50px;
+}
+
+.profileBtn:hover,
+.logOutBtn:hover {
+  border-left: 3px solid #518581;
+}
+
+.profileBtn svg,
+.logOutBtn svg {
+  margin-left: 10px;
+}
+
+.profileBtn a,
+.logOutBtn a {
+  margin-left: 20px;
 }
 
 .hamburgermenumobile {

@@ -4,7 +4,7 @@ import axios from "axios";
 import Pagination from "./Pagination";
 import ItemProduct from "./ItemProduct";
 import ListCategories from "./ListCategories";
-import "../SearchProduct/SearchProduct.css";
+import "../../Home/SearchProduct/SearchProduct.css";
 import "./ProductList.css";
 
 const ProductList = () => {
@@ -34,8 +34,8 @@ const ProductList = () => {
 
   return (
     <React.Fragment>
-      <div className="productSearchbar">
-        <form className="productSearchbox">
+      <div className="productPageSearchbar">
+        <form className="productPageSearchbox">
           <input
             type="text"
             name="search"
@@ -45,7 +45,6 @@ const ProductList = () => {
               setSearchProduct(event.target.value);
             }}
           />
-          <button>Search</button>
         </form>
       </div>
 

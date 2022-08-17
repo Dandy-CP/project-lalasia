@@ -2,6 +2,12 @@ import React, { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
 import { API_URL } from "../../../../../utils/databaseapi";
 import { numberWithCommas } from "../../../../../utils/numberWithCommas";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { faHeart as faHeartFilled } from "@fortawesome/free-regular-svg-icons";
+import { UserAuth } from "../../../../context/authContext";
+import { db } from "../../../../../utils/firebaseConfig";
+import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import Skeleton from "react-loading-skeleton";
 import axios from "axios";
 
@@ -32,8 +38,29 @@ const ReadMore = ({ children }) => {
 
 const ProductDetails = () => {
   const [product, setProduct] = useState([]);
-
+  const [like, setLike] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const { user } = UserAuth();
   let { id } = useParams();
+
+  const productID = doc(db, "users", `${user?.email}`);
+  const saveProduct = async () => {
+    if (user?.email) {
+      setLike(!like);
+      setSaved(true);
+      await updateDoc(productID, {
+        savedProduct: arrayUnion({
+          id: product.id,
+          img: product.gambar,
+          nama: product.nama,
+          tagline: product.tagline,
+          harga: product.harga,
+        }),
+      });
+    } else {
+      alert("Login Untuk save product");
+    }
+  };
 
   useEffect(() => {
     axios.get(API_URL + `products/${id}`).then((res) => setProduct(res.data));
@@ -45,6 +72,13 @@ const ProductDetails = () => {
         <img src={product.gambar} alt="productImage" />
 
         <div className="details">
+          <span style={{ cursor: "pointer" }} onClick={saveProduct}>
+            {like ? (
+              <FontAwesomeIcon icon={faHeart} size="xl" />
+            ) : (
+              <FontAwesomeIcon icon={faHeartFilled} size="xl" />
+            )}
+          </span>
           <h2>{product.nama || <Skeleton />}</h2>
           <h5>{product.tagline || <Skeleton count={5} />}</h5>
           <p>

@@ -31,6 +31,7 @@
   background: #e9ecf1;
   border-right: 1px solid #c1c4c9;
   padding: 13px 15px;
+  list-style: none;
   cursor: pointer;
   -webkit-transition: all 0.2s ease;
   -o-transition: all 0.2s ease;

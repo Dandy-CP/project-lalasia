@@ -1,9 +1,9 @@
 import React from "react";
-import { Outlet } from "react-router-dom";
 import "../Header/Header.css";
 import TitleIcon from "../../../assets/Sketch-annotation-element-stroke-abstract-stars-plus-wink-filled.png";
 import ArrowIcon from "../../../assets/Sketch-annotation-element-stroke-line-arrow-spiral-down-5.png";
 import Heroimg from "../../../assets/Heroimg.png";
+import SearchProduct from "../SearchProduct/SearchProduct";
 
 const Header = () => {
   return (
@@ -23,19 +23,9 @@ const Header = () => {
         </p>
       </div>
 
-      <div className="heroserachbar">
-        <form className="searchbox">
-          <input
-            type="text"
-            name="search"
-            id="search"
-            placeholder="Search Property"
-          />
-          <button>Search</button>
-        </form>
-      </div>
+      <SearchProduct />
+
       <img src={Heroimg} alt="heroimg" className="imgheaderdesktop" />
-      <Outlet />
     </div>
   );
 };

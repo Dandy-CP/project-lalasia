@@ -1,9 +1,10 @@
 import React from "react";
+import HeaderService from "../ServicePage/HeaderService/HeaderService";
 
 function ServicePage() {
   return (
     <div className="ServicePage">
-      <ServicePage />
+      <HeaderService />
     </div>
   );
 }
