@@ -14,7 +14,8 @@ import RelatedDetails from "./components/Page/Product/ListProduct/ProductDetails
 import LogIn from "./components/Page/User/Login"
 import SignUp from "./components/Page/User/Signup"
 import Profile from "./components/Page/User/Profile";
-import CartUser from "./components/Page/User/CartUser";
+import Cart from "./components/Page/User/Cart";
+import Checkout from "./components/Page/User/CheckOut";
 
 import "./App.css";
 
@@ -38,11 +39,18 @@ function App() {
                 <Profile />
               </ProtectedRoute>
             } />
+            
             <Route path ="cart" element={
               <ProtectedRoute>
-                <CartUser />
+                <Cart />
               </ProtectedRoute>
-            } />          
+            } />
+
+            <Route path="checkout" element={
+              <ProtectedRoute>
+                <Checkout />
+              </ProtectedRoute>
+            } />
 
               <Route path="service" element={<ServicePage />} />
               <Route path="about" element={<About />} />

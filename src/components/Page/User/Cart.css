@@ -1,0 +1,206 @@
+.containerCartPage {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+
+  padding: 100px;
+}
+
+.itemsCartUserBox {
+  width: 800px;
+  margin-right: 20px;
+  background-color: white;
+  padding: 0px 40px 40px 40px;
+  border-radius: 5px;
+}
+
+.ringkasanBelanja {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 500px;
+  height: 250px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.ringkasanBelanja h2 {
+  text-align: center;
+  margin-top: 0px;
+}
+
+.totalHarga {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+.btnAction {
+  display: flex;
+  justify-content: center;
+}
+
+.cartAction {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.itemLineBreak {
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.cartItems {
+  display: flex;
+  flex-direction: row;
+  margin-top: 50px;
+}
+
+.cartItems input[type="checkbox"] {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.descItem {
+  margin-left: 50px;
+}
+
+.descItem h3 {
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.descItem h3:hover {
+  color: blue;
+}
+
+.descItem p {
+  margin-top: 0px;
+  margin-bottom: 5px;
+}
+
+.descItem h4 {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.btnBeli {
+  box-sizing: border-box;
+  width: 400px;
+  height: 50px;
+
+  background-color: #518581;
+
+  font-size: 18px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnBeli:hover {
+  background-color: #5a948f;
+}
+
+.itemBoxWrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.checkboxAction {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 880px;
+  height: 55px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.itemAllCheckBox h3 {
+  margin-left: 40px;
+}
+
+.itemAllCheckBox input[type="checkbox"] {
+  width: 20px;
+  margin-right: 10px;
+  margin-left: 40px;
+}
+
+.checkboxAction button {
+  box-sizing: border-box;
+  width: 100px;
+  height: 35px;
+  margin-right: 40px;
+
+  background-color: #518581;
+
+  font-size: 15px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.wishListCollection {
+  width: 780px;
+  margin-top: 20px;
+  padding: 20px 50px 50px 50px;
+  border-radius: 5px;
+  background-color: white;
+}
+
+.wishListCollection h2 {
+  text-align: center;
+}
+
+.wishListItem {
+  margin-top: 40px;
+}
+
+.wishListItemWraper {
+  display: flex;
+  border: 1px #518581 solid;
+  margin-left: 20px;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.wishListItemWraper img {
+  width: 100px;
+  height: 100px;
+  margin-right: 10px;
+}
+
+.descWishlist {
+  display: flex;
+  flex-direction: column;
+}
+
+.descWishlist h3 {
+  font-size: 15px;
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.descWishlist p {
+  font-size: 10px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.descWishlist h4 {
+  font-size: 15px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}

@@ -19,8 +19,6 @@ const RelatedList = () => {
 
   const randomItem = related.sort(() => 0.5 - Math.random());
 
-  console.log(randomItem);
-
   return (
     <React.Fragment>
       <div className="relatedTitle">
@@ -33,13 +31,7 @@ const RelatedList = () => {
               <React.Fragment key={productRelated.id}>
                 <div>
                   <div className="relatedWraper">
-                    <a
-                      onClick={() =>
-                        navigate(
-                          `../../related/${productId}/${productRelated.id}`
-                        )
-                      }
-                    >
+                    <a onClick={() => navigate( `../../related/${productId}/${productRelated.id}`)}>
                       <img src={productRelated.gambar} alt="imageProduct" />
                       <p>{productRelated.category.nama}</p>
                       <h1>{productRelated.nama}</h1>

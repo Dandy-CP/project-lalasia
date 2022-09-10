@@ -3,7 +3,7 @@ import { UserAuth } from "../../context/authContext";
 import { db } from "../../../utils/firebaseConfig";
 import { updateDoc, doc, onSnapshot } from "firebase/firestore";
 import { numberWithCommas } from "../../../utils/numberWithCommas";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
@@ -40,8 +40,6 @@ const Profile = () => {
     }
   };
 
-  console.log(savedProduct);
-
   return (
     <React.Fragment>
       <div className="containerProfile">
@@ -66,7 +64,10 @@ const Profile = () => {
           ? savedProduct.map((item) => (
               <div className="itemProduct" key={item.id}>
                 <div className="itemWraper">
-                  <a /* onClick={() => navigate(`${product.category.id}/${product.id}`)} */
+                  <a
+                    onClick={() =>
+                      navigate(`../product/${item.category}/${item.id}`)
+                    }
                   >
                     <img src={item?.img} alt="ProductImage" />
                     <h1>{item?.nama}</h1>

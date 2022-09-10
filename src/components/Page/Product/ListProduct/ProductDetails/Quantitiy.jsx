@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import "./Quantitiy.css";
 
-const Quantitiy = () => {
-  const [quantitiy, SetQuantitiy] = useState(1);
+const Quantitiy = ({ quantitiy, setQuantitiy }) => {
+  /* const [quantitiy, SetQuantitiy] = useState(1); */
 
-  const handleDecerment = () => {
+  const handleDecerment = (e) => {
+    e.preventDefault();
     if (quantitiy > 1) {
-      SetQuantitiy((prevCount) => prevCount - 1);
+      setQuantitiy((prevCount) => prevCount - 1);
     }
   };
 
-  const handleIncerment = () => {
+  const handleIncerment = (e) => {
+    e.preventDefault();
     if (quantitiy < 5) {
-      SetQuantitiy((prevCount) => prevCount + 1);
+      setQuantitiy((prevCount) => prevCount + 1);
     }
   };
 

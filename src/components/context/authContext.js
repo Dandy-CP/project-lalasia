@@ -18,6 +18,10 @@ export function AuthContextProvider({ children }) {
     setDoc(doc(db, "users", email), {
       savedProduct: [],
       cartProduct: [],
+      checkoutProduct: [],
+      buyHistory: [],
+      viewHistory: [],
+      address: [],
     });
   }
 

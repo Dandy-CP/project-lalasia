@@ -1,0 +1,84 @@
+.btnUserAccount {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px;
+  /*   width: 180px; */
+  height: 50px;
+
+  font-size: 15px;
+}
+
+.btnUserAccount a {
+  text-decoration: none;
+}
+
+.btnUserAccount img {
+  width: 40px;
+  border-radius: 50px;
+  margin-right: 10px;
+}
+
+.dropDownUser {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdownContent {
+  display: none;
+  position: absolute;
+  background-color: white;
+  border-radius: 10px;
+  width: 300px;
+  height: 150px;
+  right: -0%;
+  /* min-width: 160px; */
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdownContent p {
+  text-align: center;
+  font-weight: 500;
+}
+
+.dropdownContent a {
+  width: 100px;
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+  padding-bottom: 5px;
+}
+
+.dropDownUser:hover .dropdownContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.profileBtn,
+.logOutBtn {
+  display: flex;
+  align-items: center;
+  height: 40px;
+  margin-bottom: 10px;
+  cursor: pointer;
+}
+
+.profileBtn:hover,
+.logOutBtn:hover {
+  border-left: 3px solid #518581;
+}
+
+.profileBtn svg,
+.logOutBtn svg {
+  margin-left: 10px;
+}
+
+.profileBtn a,
+.logOutBtn a {
+  margin-left: 20px;
+}

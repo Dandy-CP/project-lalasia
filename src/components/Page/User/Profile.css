@@ -14,9 +14,6 @@
   justify-content: center;
 }
 
-.bannerUser img {
-}
-
 .userAvatar {
   position: absolute;
   margin-top: 200px;
@@ -36,12 +33,10 @@
 
 .userSavedProduct {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 40px;
   padding-bottom: 150px;
-}
-
-.itemProduct {
-  margin-left: 20px;
 }
 
 .iconDeleteProduct {

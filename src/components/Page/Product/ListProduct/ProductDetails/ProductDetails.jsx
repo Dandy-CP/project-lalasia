@@ -38,6 +38,7 @@ const ReadMore = ({ children }) => {
 
 const ProductDetails = () => {
   const [product, setProduct] = useState([]);
+  const [quantitiy, SetQuantitiy] = useState(1);
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false);
   const { user } = UserAuth();
@@ -51,6 +52,7 @@ const ProductDetails = () => {
       await updateDoc(productID, {
         savedProduct: arrayUnion({
           id: product.id,
+          category: product.category.id,
           img: product.gambar,
           nama: product.nama,
           tagline: product.tagline,
@@ -59,6 +61,24 @@ const ProductDetails = () => {
       });
     } else {
       alert("Login Untuk save product");
+    }
+  };
+
+  const addToCart = async () => {
+    if (user?.email) {
+      await updateDoc(productID, {
+        cartProduct: arrayUnion({
+          id: product.id,
+          category: product.category.id,
+          img: product.gambar,
+          nama: product.nama,
+          tagline: product.tagline,
+          harga: product.harga,
+          qty: quantitiy,
+        }),
+      });
+    } else {
+      alert("Login terlebih dahulu Untuk Melanjutkan");
     }
   };
 
@@ -86,10 +106,12 @@ const ProductDetails = () => {
           </p>
           <h2>Rp.{numberWithCommas(product.harga) || <Skeleton />}</h2>
 
-          <Quantitiy />
+          <Quantitiy quantitiy={quantitiy} setQuantitiy={SetQuantitiy} />
 
           <button className="btnBuy">Buy Now</button>
-          <button className="btnAdd">Add To Cart</button>
+          <button className="btnAdd" onClick={addToCart}>
+            Add To Cart
+          </button>
         </div>
       </div>
 

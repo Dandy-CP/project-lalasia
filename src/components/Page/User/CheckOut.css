@@ -1,0 +1,141 @@
+.checkOutContainer {
+  display: flex;
+  justify-content: space-evenly;
+
+  padding: 100px;
+}
+
+.checkoutWrap {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin-right: 20px;
+}
+
+.alamatUser {
+  background-color: white;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+}
+
+.itemCheckout {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.checkoutItems {
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.descItemCheckout {
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+}
+
+.descItemCheckout h3 {
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
+
+.descItemCheckout p {
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.descItemCheckout h4 {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.kurirPengiriman {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.kurirPengiriman label {
+  margin-bottom: 10px;
+}
+
+.kurirPengiriman select {
+  box-sizing: border-box;
+  background-color: #518581;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  width: 300px;
+  height: 50px;
+  font-size: 15px;
+  text-align: center;
+}
+
+.selectKurir {
+  display: flex;
+  flex-direction: column;
+}
+
+.ringkasanCheckout {
+  width: 500px;
+  height: 280px;
+  padding: 10px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+.ringkasanCheckout h3 {
+  text-align: center;
+}
+
+.totalCheckout {
+  display: flex;
+  flex-direction: column;
+  margin: 10px;
+}
+
+.totalCheckout h4 {
+  margin-bottom: 0px;
+}
+
+.totalBayarItem {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalBayarOngkir {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalTagihan {
+  display: flex;
+  justify-content: space-between;
+}
+
+.btnCheckout {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.btnBayar {
+  box-sizing: border-box;
+  width: 400px;
+  height: 50px;
+
+  background-color: #518581;
+
+  font-size: 18px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnBayar:hover {
+  background-color: #5a948f;
+}
