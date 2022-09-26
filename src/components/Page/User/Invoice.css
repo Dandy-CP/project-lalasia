@@ -1,0 +1,138 @@
+.navbarInvoice {
+  display: flex;
+  justify-content: flex-end;
+  background-color: white;
+  height: 50px;
+  padding: 10px;
+  border-bottom: 2px solid #f3f3f3;
+}
+
+.navbarInvoice button {
+  box-sizing: border-box;
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
+
+  background-color: #518581;
+
+  font-size: 15px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.navbarInvoice button:hover {
+  background-color: #5a948f;
+}
+
+.containerInvoice {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: white;
+  border-radius: 10px;
+}
+
+.logoNinvoice {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.peneribitan {
+  display: flex;
+  justify-content: space-between;
+}
+
+.detailPembeli p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.alamatPenerima {
+  width: 350px;
+}
+
+.tableHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tableHeader h5 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.tableHeaderNamaProduk {
+  width: 250px;
+}
+
+.jumlahBarang,
+.hargaSatuan {
+  display: flex;
+  justify-content: center;
+  width: 150px;
+}
+
+.productBuyList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.pembayaran {
+  margin-left: auto;
+  width: 500px;
+}
+
+.pembayaran h2 {
+  width: 200px;
+  color: white;
+  background-color: red;
+  border-radius: 10px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.totalHargaOrder,
+.totalOngkirOrder,
+.totalBelanjaOrder {
+  display: flex;
+  justify-content: space-between;
+}
+
+.totalHargaOrder h5 {
+  margin-bottom: 10px;
+}
+
+.totalOngkirOrder p {
+  margin-top: 0px;
+  font-size: 15px;
+}
+
+.totalBelanjaOrder h5 {
+  margin-top: 15px;
+}
+
+.kurirNbank {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.kurirNbank p,
+.kurirNbank h5 {
+  margin-bottom: 10px;
+  margin-top: 0px;
+}
+
+.statement p {
+  text-align: center;
+}

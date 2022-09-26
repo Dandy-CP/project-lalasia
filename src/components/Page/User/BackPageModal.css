@@ -1,0 +1,54 @@
+.containerModalBackConfirm {
+  /*   display: flex;
+  flex-direction: column;
+  justify-content: center; */
+  width: 800px;
+  height: 400px;
+  padding: 20px;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: white;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+.warningBack {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.warningBack h3 {
+  margin-bottom: 0px;
+}
+
+.btnModalBack {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 100px;
+}
+
+.btnModalBack button {
+  box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+
+  background-color: #518581;
+  border-radius: 5px;
+
+  font-size: 15px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnOK {
+  margin-right: 20px;
+}

@@ -1,0 +1,117 @@
+.containerOrderList {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+}
+
+.containerOrderList h2 {
+  margin-right: 900px;
+}
+
+.boxOrderWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 1000px;
+  padding: 50px;
+  background-color: white;
+  border: 1px solid #518581;
+  background: #ffffff;
+  box-shadow: 8px 8px 16px #ededed, -8px -8px 16px #ffffff;
+  border-radius: 5px;
+}
+
+.productOrdered {
+  width: 1000px;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  background: #ffffff;
+  box-shadow: 8px 8px 16px #ededed, -8px -8px 16px #ffffff;
+}
+
+.orderDetail {
+  display: flex;
+  align-items: center;
+}
+
+.orderDetail img {
+  margin-right: 10px;
+}
+
+.orderDetail p {
+  margin-right: 10px;
+}
+
+.statusOrder {
+  width: 100px;
+  border-radius: 5px;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+  background-color: rgb(240, 30, 30);
+  font-size: 14px;
+}
+
+.orderProduct {
+  display: flex;
+  margin-top: 20px;
+}
+
+.orderProductDanTagihan {
+  display: flex;
+}
+
+.namaProduct {
+  width: 650px;
+  margin-left: 20px;
+}
+
+.namaProduct h4 {
+  margin-bottom: 5px;
+}
+
+.namaProduct p {
+  margin-top: 0px;
+  margin-bottom: 10px;
+}
+
+.orderBtnAction {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.orderBtnAction p {
+  color: #518581;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btnRebuy {
+  box-sizing: border-box;
+  width: 200px;
+  height: 50px;
+  border-radius: 5px;
+  margin-left: 20px;
+
+  background-color: #518581;
+
+  font-size: 17px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnRebuy:hover {
+  background-color: #5a948f;
+}
+
+.orderTagihan {
+  margin-left: 10px;
+}

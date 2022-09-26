@@ -105,6 +105,21 @@
   transition: 0.5s;
 }
 
+.btnBeliDisable {
+  box-sizing: border-box;
+  width: 400px;
+  height: 50px;
+
+  background-color: gray;
+
+  font-size: 18px;
+
+  color: white;
+  border: none;
+
+  cursor: not-allowed;
+}
+
 .btnBeli:hover {
   background-color: #5a948f;
 }
@@ -203,4 +218,15 @@
   font-size: 15px;
   margin-top: 0px;
   margin-bottom: 0px;
+}
+
+.emptyCartPage {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 50px;
+  width: 500px;
 }

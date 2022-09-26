@@ -4,12 +4,13 @@ import { numberWithCommas } from "../../../../utils/numberWithCommas";
 import { stack as Menu } from "react-burger-menu";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../../context/authContext";
-import { updateDoc, doc, onSnapshot } from "firebase/firestore";
+import { doc, onSnapshot } from "firebase/firestore";
 import { db } from "../../../../utils/firebaseConfig";
 import {
   faUser,
   faArrowRightFromBracket,
   faCartFlatbed,
+  faCashRegister,
 } from "@fortawesome/free-solid-svg-icons";
 
 import "../Navbar/Navbar.css";
@@ -198,6 +199,11 @@ const Navbar = () => {
               <div className="profileBtn">
                 <FontAwesomeIcon icon={faUser} size="xl" />
                 <Link to="/profile">Profile Saya</Link>
+              </div>
+
+              <div className="pembelianBtn">
+                <FontAwesomeIcon icon={faCashRegister} size="xl" />
+                <Link to="/orderList">Pembelian</Link>
               </div>
 
               <div className="logOutBtn">

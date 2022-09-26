@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { API_URL } from "../../../../../utils/databaseapi";
 import { numberWithCommas } from "../../../../../utils/numberWithCommas";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,13 +9,16 @@ import { UserAuth } from "../../../../context/authContext";
 import { db } from "../../../../../utils/firebaseConfig";
 import { arrayUnion, doc, updateDoc } from "firebase/firestore";
 import Skeleton from "react-loading-skeleton";
+import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 
 import RelatedList from "./ProductRelated/RelatedList";
 import Quantitiy from "./Quantitiy";
+import ModalAddToCart from "./ModalAddToCart";
 
 import "react-loading-skeleton/dist/skeleton.css";
 import "../ProductDetails/ProductDetails.css";
+import "react-toastify/dist/ReactToastify.css";
 
 const ReadMore = ({ children }) => {
   const text = children;
@@ -39,9 +42,11 @@ const ReadMore = ({ children }) => {
 const ProductDetails = () => {
   const [product, setProduct] = useState([]);
   const [quantitiy, SetQuantitiy] = useState(1);
+  const [modalCart, setModalCart] = useState(false);
   const [like, setLike] = useState(false);
   const [saved, setSaved] = useState(false);
   const { user } = UserAuth();
+  const navigate = useNavigate();
   let { id } = useParams();
 
   const productID = doc(db, "users", `${user?.email}`);
@@ -82,23 +87,69 @@ const ProductDetails = () => {
     }
   };
 
+  const buyNow = async () => {
+    if (user?.email) {
+      await updateDoc(productID, {
+        checkoutProduct: arrayUnion({
+          id: product.id,
+          category: product.category.id,
+          img: product.gambar,
+          nama: product.nama,
+          tagline: product.tagline,
+          harga: product.harga,
+          qty: quantitiy,
+        }),
+      });
+      navigate(`../../checkout`);
+    } else {
+      alert("Login terlebih dahulu Untuk Melanjutkan");
+    }
+  };
+
   useEffect(() => {
     axios.get(API_URL + `products/${id}`).then((res) => setProduct(res.data));
-  }, []);
+  }, [id]);
+
+  const notifyAddToWishList = () =>
+    toast.success("Berhasil Disimpan Ke Wishlist", {
+      position: "top-center",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
 
   return (
     <React.Fragment>
+      <ToastContainer style={{ fontSize: "13px" }} />
+
+      <ModalAddToCart
+        open={modalCart}
+        onClose={() => setModalCart(false)}
+        thisProduct={product}
+      />
+
       <div className="productDetails">
         <img src={product.gambar} alt="productImage" />
 
         <div className="details">
-          <span style={{ cursor: "pointer" }} onClick={saveProduct}>
+          <div
+            className="addToWishList"
+            onClick={() => {
+              saveProduct();
+              notifyAddToWishList();
+            }}
+          >
             {like ? (
               <FontAwesomeIcon icon={faHeart} size="xl" />
             ) : (
               <FontAwesomeIcon icon={faHeartFilled} size="xl" />
             )}
-          </span>
+            <span className="tooltiptext">Tambahkan Ke Wishlist</span>
+          </div>
+
           <h2>{product.nama || <Skeleton />}</h2>
           <h5>{product.tagline || <Skeleton count={5} />}</h5>
           <p>
@@ -108,8 +159,16 @@ const ProductDetails = () => {
 
           <Quantitiy quantitiy={quantitiy} setQuantitiy={SetQuantitiy} />
 
-          <button className="btnBuy">Buy Now</button>
-          <button className="btnAdd" onClick={addToCart}>
+          <button className="btnBuy" onClick={buyNow}>
+            Buy Now
+          </button>
+          <button
+            className="btnAdd"
+            onClick={() => {
+              addToCart();
+              setModalCart(true);
+            }}
+          >
             Add To Cart
           </button>
         </div>

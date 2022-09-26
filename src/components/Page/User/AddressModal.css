@@ -1,0 +1,162 @@
+.overlayModal {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+}
+
+.containerModalAddress {
+  width: 800px;
+  height: 400px;
+  padding: 20px;
+  position: fixed;
+  top: 0%;
+  left: 50%;
+  transform: translate(-50%, 50%);
+  background-color: white;
+  box-shadow: 0px 0px 18px 0px rgba(0, 0, 0, 0.75);
+  border-radius: 5px;
+}
+
+.containerModalAddress h3 {
+  text-align: center;
+}
+
+.closeModal {
+  position: fixed;
+  top: 10px;
+  right: 20px;
+  box-sizing: border-box;
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.formAddress {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 50px 50px 50px;
+}
+
+.formAddress p {
+  margin-top: 5px;
+  margin-bottom: 0px;
+  font-size: 12px;
+}
+
+.inputRowPenerima {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.inputRowPenerima input[type="number"] {
+  width: 300px;
+}
+
+.inputRowPenerima input {
+  width: 300px;
+}
+
+.inputRowKota {
+  display: flex;
+  flex-direction: row;
+}
+
+.inputRowKota input[type="number"] {
+  width: 150px;
+}
+
+.inputRowKota input {
+  width: 300px;
+  margin-right: 100px;
+}
+
+.did-floating-label-content {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.did-floating-label-content input {
+  height: 40px;
+}
+
+.did-floating-label {
+  color: black;
+  font-size: 13px;
+  font-weight: normal;
+  position: absolute;
+  pointer-events: none;
+  left: 15px;
+  top: 11px;
+  padding: 0 5px;
+  background: #fff;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+}
+
+.did-floating-input {
+  font-size: 12px;
+  display: block;
+  width: 100%;
+  height: 36px;
+  padding: 0 20px;
+  background: #fff;
+  color: #323840;
+  border: 1px solid black;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.did-floating-input:focus ~ .did-floating-label {
+  outline: none;
+
+  top: -8px;
+  font-size: 13px;
+}
+
+.did-floating-input:not(:placeholder-shown) ~ .did-floating-label {
+  top: -8px;
+  font-size: 13px;
+}
+
+.addressBtnAction {
+  display: flex;
+  justify-content: center;
+  justify-content: space-evenly;
+}
+
+.btnSaveAddress {
+  box-sizing: border-box;
+  width: 100px;
+  height: 40px;
+  margin-right: 10px;
+
+  background-color: #518581;
+
+  font-size: 15px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btnCancelSave {
+  box-sizing: border-box;
+  width: 100px;
+  height: 40px;
+
+  background-color: #518581;
+
+  font-size: 15px;
+
+  color: white;
+  border: none;
+
+  cursor: pointer;
+  transition: 0.5s;
+}

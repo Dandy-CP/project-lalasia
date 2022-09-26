@@ -1,0 +1,96 @@
+.ContainerCheckoutSuccess {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  padding: 100px;
+}
+
+/* .ContainerCheckoutSuccess p {
+  font-size: 25px;
+} */
+
+.countDownTimer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(238, 238, 238);
+  border: 1px solid #518581;
+  border-radius: 5px;
+  width: 800px;
+  height: 250px;
+}
+
+.countDownTimer p {
+  width: 400px;
+  text-align: center;
+  font-size: 14px;
+  color: red;
+  margin-top: 0px;
+  margin-bottom: 0px;
+}
+
+.line {
+  width: 800px;
+  border: 0;
+  height: 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.transfer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 800px;
+  border-radius: 5px;
+
+  margin-top: 20px;
+}
+
+.transfer h3 {
+  margin-bottom: 5px;
+}
+
+.transfer p {
+  color: #518581;
+  font-weight: 500;
+}
+
+.norek {
+  display: flex;
+  flex-direction: row;
+  margin-top: 15px;
+}
+
+.norek h4 {
+  margin-left: 0px;
+}
+
+.jumlahPembayaran {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+
+  margin-top: 20px;
+}
+
+.jumlahPembayaran h3 {
+  margin-bottom: 10px;
+}
+
+.jumlahPembayaran h2 {
+  margin-top: 0px;
+  color: orangered;
+}
+
+.goToHistory p {
+  color: #518581;
+  font-weight: 500;
+}
+
+.infoStatement {
+  width: 700px;
+  text-align: center;
+}

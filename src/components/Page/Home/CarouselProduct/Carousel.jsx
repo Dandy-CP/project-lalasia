@@ -30,7 +30,6 @@ export default class Carousel extends Component {
     console.log(this.state.menus);
     const { menus } = this.state;
     const randomItem = menus.sort(() => 0.5 - Math.random());
-    console.log(randomItem);
 
     var settings = {
       dots: true,
