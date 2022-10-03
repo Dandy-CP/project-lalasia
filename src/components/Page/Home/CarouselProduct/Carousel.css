@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
 
-  padding-top: 50px;
+  padding-top: 0px;
 }
 
 .titlecarousel {
@@ -37,7 +37,43 @@
   color: #afadb5;
 }
 
-@media screen and (max-device-width: 639px) {
+.sliderProduct {
+  margin: 0 auto;
+  width: 1300px;
+}
+
+@media screen and (min-width: 1920px) {
+  .sliderProduct {
+    width: 1500px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .sliderProduct {
+    width: 1100px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .sliderProduct {
+    width: 700px;
+    height: 500px;
+  }
+
+  .slick-slide {
+    margin: 0 15px;
+  }
+
+  .slick-list {
+    margin: 0 -15px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  .sliderProduct {
+    width: 300px;
+  }
+
   .titlecarousel h5 {
     font-size: 14px;
   }

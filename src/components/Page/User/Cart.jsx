@@ -20,7 +20,7 @@ const Cart = () => {
   const navigate = useNavigate();
 
   let settings = {
-    dots: true,
+    dots: false,
     infinite: true,
     autoplay: true,
     pauseOnFocus: true,
@@ -30,15 +30,14 @@ const Cart = () => {
     arrows: false,
     responsive: [
       {
-        breakpoint: 640,
+        breakpoint: 767,
         settings: {
-          slidesToShow: 2,
-          slidesToScroll: 2,
-          initialSlide: 1,
+          slidesToShow: 1,
+          slidesToScroll: 1,
         },
       },
       {
-        breakpoint: 375,
+        breakpoint: 480,
         settings: {
           slidesToShow: 1,
           slidesToScroll: 1,
@@ -286,6 +285,31 @@ const Cart = () => {
                   : null}
               </>
             )}
+          </div>
+
+          <div className="ringkasanBelanjaMobile">
+            <h2>Ringkasan Belanja</h2>
+            <div className="totalHarga">
+              <h4>Total Harga ( {itemCount} Produk )</h4>
+              <h4>Rp. {numberWithCommas(totalBayar)}</h4>
+            </div>
+            <div className="btnAction">
+              {itemCount === 0 ? (
+                <button className="btnBeliDisable">
+                  Checkout ( {itemCount} )
+                </button>
+              ) : (
+                <button
+                  className="btnBeli"
+                  onClick={() => {
+                    checkout();
+                    navigate("/checkout");
+                  }}
+                >
+                  Checkout ( {itemCount} )
+                </button>
+              )}
+            </div>
           </div>
 
           <div className="wishListCollection">

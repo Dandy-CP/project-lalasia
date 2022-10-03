@@ -35,8 +35,14 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  width: 1300px;
+  margin: 0 auto;
   gap: 40px;
-  padding-bottom: 150px;
+  padding: 50px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 8px 8px 16px #ededed, -8px -8px 16px #ffffff;
+  margin-bottom: 150px;
 }
 
 .iconDeleteProduct {
@@ -47,4 +53,68 @@
 
 .iconDeleteProduct:hover {
   color: red;
+}
+
+@media screen and (max-width: 1280px) {
+  .userSavedProduct {
+    width: 1100px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .userInfo {
+    margin-left: 200px;
+  }
+
+  .bannerUser img {
+    width: 700px;
+  }
+
+  .userAvatar {
+    margin-top: 120px;
+    margin-left: 20px;
+  }
+
+  .userAvatar img {
+    width: 150px;
+    border-radius: 50%;
+  }
+
+  .titleSavedProduct {
+    font-size: 12px;
+  }
+
+  .userSavedProduct {
+    width: 650px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .userInfo {
+    margin-left: 140px;
+  }
+
+  .bannerUser img {
+    width: 370px;
+    margin: 0 auto;
+  }
+
+  .userAvatar {
+    margin-top: 30px;
+    margin-left: 20px;
+  }
+
+  .userAvatar img {
+    width: 100px;
+    border-radius: 50%;
+  }
+
+  .titleSavedProduct {
+    font-size: 12px;
+  }
+
+  .userSavedProduct {
+    width: 350px;
+    padding: 10px;
+  }
 }

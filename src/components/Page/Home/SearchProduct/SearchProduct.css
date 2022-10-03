@@ -109,7 +109,7 @@
   transition: 0.2s ease-in;
 }
 
-@media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+@media screen and (min-width: 767px) and (max-width: 1023px) {
   .productSearchbox input {
     width: 500px;
     height: 84px;
@@ -117,5 +117,44 @@
 
   .dataResult {
     width: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .productSearchbox input {
+    width: 340px;
+    height: 80px;
+  }
+
+  .productSearchbox input[search="search"],
+  .productPageSearchbox input[type="text"] {
+    font-size: 15px;
+    padding-left: 80px;
+  }
+
+  .dataResult {
+    width: 340px;
+  }
+
+  .dataResult .dataItem {
+    width: 300px;
+    height: 80px;
+  }
+
+  .dataItem img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .dataItem p {
+    font-size: 10px;
+  }
+
+  .dataItem h1 {
+    font-size: 15px;
+  }
+
+  .dataItem h2 {
+    font-size: 12px;
   }
 }

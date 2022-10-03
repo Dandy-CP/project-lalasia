@@ -16,3 +16,14 @@
   font-size: 18px;
   width: 600px;
 }
+
+@media screen and (max-width: 767px) {
+  .headerTitle h1 {
+    font-size: 35px;
+  }
+
+  .headerTitle p {
+    font-size: 14px;
+    width: 370px;
+  }
+}

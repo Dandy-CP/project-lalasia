@@ -11,7 +11,7 @@ import CarouselImg3 from "../../../assets/CarouselImage3.png";
 export default class CarouselImage extends Component {
   render() {
     const settings = {
-      dots: true,
+      dots: false,
       infinite: true,
       speed: 500,
       slidesToShow: 1,

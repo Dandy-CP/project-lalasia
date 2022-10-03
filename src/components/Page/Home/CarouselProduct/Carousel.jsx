@@ -27,7 +27,6 @@ export default class Carousel extends Component {
   }
 
   render() {
-    console.log(this.state.menus);
     const { menus } = this.state;
     const randomItem = menus.sort(() => 0.5 - Math.random());
 
@@ -42,15 +41,7 @@ export default class Carousel extends Component {
       arrows: false,
       responsive: [
         {
-          breakpoint: 640,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 2,
-            initialSlide: 1,
-          },
-        },
-        {
-          breakpoint: 375,
+          breakpoint: 480,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1,
@@ -71,12 +62,14 @@ export default class Carousel extends Component {
             </p>
           </div>
         </div>
-        <Slider {...settings}>
-          {randomItem &&
-            randomItem
-              .slice(0, 6)
-              .map((menu) => <CarouselCard key={menu.id} menu={menu} />)}
-        </Slider>
+        <div className="sliderProduct">
+          <Slider {...settings}>
+            {randomItem &&
+              randomItem
+                .slice(0, 6)
+                .map((menu) => <CarouselCard key={menu.id} menu={menu} />)}
+          </Slider>
+        </div>
       </div>
     );
   }

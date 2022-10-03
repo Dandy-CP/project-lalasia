@@ -49,3 +49,47 @@
   margin-left: 10px;
   padding-bottom: 10px;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .itemProduct {
+    width: 250px;
+  }
+
+  .itemProduct img {
+    width: 250px;
+  }
+
+  .itemWraper p {
+    font-size: 12px;
+  }
+
+  .itemWraper h1 {
+    font-size: 20px;
+  }
+
+  .itemWraper h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .itemProduct {
+    width: 150px;
+  }
+
+  .itemProduct img {
+    width: 150px;
+  }
+
+  .itemWraper p {
+    font-size: 11px;
+  }
+
+  .itemWraper h1 {
+    font-size: 16px;
+  }
+
+  .itemWraper h2 {
+    font-size: 16px;
+  }
+}

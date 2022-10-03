@@ -54,3 +54,18 @@
   background: #518581;
   color: #fff;
 }
+
+@media screen and (max-width: 767px) {
+  .categories {
+    margin-right: 0 auto;
+  }
+
+  .tabs_wrap {
+    width: 350px;
+    font-size: 10px;
+  }
+
+  .tabs_wrap ul {
+    padding-left: 0px;
+  }
+}

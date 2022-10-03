@@ -87,3 +87,9 @@
 
   cursor: pointer;
 }
+
+@media screen and (max-width: 767px) {
+  .containerModalRebuy {
+    width: 300px;
+  }
+}

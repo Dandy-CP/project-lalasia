@@ -115,3 +115,113 @@
 .orderTagihan {
   margin-left: 10px;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .containerOrderList {
+    padding: 30px;
+  }
+
+  .containerOrderList h2 {
+    margin-right: 500px;
+  }
+
+  .boxOrderWrap {
+    width: 600px;
+  }
+
+  .productOrdered {
+    width: 550px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .containerOrderList {
+    padding: 15px;
+  }
+
+  .containerOrderList h2 {
+    margin-right: 150px;
+  }
+
+  .boxOrderWrap {
+    width: 250px;
+  }
+
+  .productOrdered {
+    width: 300px;
+    padding: 10px;
+  }
+
+  .statusOrder {
+    width: 85px;
+    font-size: 12px;
+  }
+
+  .orderDetail p {
+    font-size: 12px;
+  }
+
+  .orderDetail p:last-child {
+    display: none;
+  }
+
+  .orderDetail img {
+    width: 23px;
+    height: 23px;
+  }
+
+  .orderProduct {
+    align-items: center;
+  }
+
+  .orderTagihan p {
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 20px;
+  }
+
+  .orderTagihan h3 {
+    margin-top: 10px;
+    font-size: 13px;
+  }
+
+  .orderProduct img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .namaProduct {
+    width: 120px;
+    height: 90px;
+    margin-left: 10px;
+  }
+
+  .namaProduct h4 {
+    font-size: 13px;
+    margin-bottom: 5px;
+  }
+
+  .namaProduct p {
+    font-size: 10px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+
+  .orderBtnAction {
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .orderBtnAction p {
+    font-size: 12px;
+    color: #518581;
+    font-weight: 600;
+    cursor: pointer;
+  }
+
+  .btnRebuy {
+    width: 90px;
+    height: 30px;
+    font-size: 13px;
+  }
+}

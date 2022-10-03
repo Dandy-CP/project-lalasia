@@ -122,3 +122,60 @@
   font-weight: 600;
   cursor: pointer;
 }
+
+@media screen and (min-width: 1920px) {
+  .productDetails img {
+    width: 30%;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .productDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productDetails img {
+    width: 450px;
+    margin-bottom: 50px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .productDetails {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .productDetails img {
+    width: 300px;
+    margin-bottom: 50px;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .details h2 {
+    font-size: 25px;
+  }
+
+  .details h5 {
+    font-size: 13px;
+  }
+
+  .details p {
+    width: 300px;
+    font-size: 15px;
+  }
+
+  .btnAdd {
+    margin: 0 auto;
+  }
+
+  .btnBuy {
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+}

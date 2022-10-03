@@ -52,3 +52,39 @@
 .btnOK {
   margin-right: 20px;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .containerModalBackConfirm {
+    width: 650px;
+  }
+
+  .warningBack h2 {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .containerModalBackConfirm {
+    width: 300px;
+  }
+
+  .warningBack h2 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .warningBack h3 {
+    font-size: 16px;
+    text-align: center;
+  }
+
+  .btnModalBack button {
+    width: 150px;
+    height: 50px;
+    font-size: 13px;
+  }
+
+  .btnOK {
+    font-size: 10px;
+  }
+}

@@ -24,6 +24,9 @@
   background-color: white;
   border-radius: 5px;
 }
+.ringkasanBelanjaMobile {
+  display: none;
+}
 
 .ringkasanBelanja h2 {
   text-align: center;
@@ -185,7 +188,7 @@
 
 .wishListItemWraper {
   display: flex;
-  border: 1px #518581 solid;
+  border: 1px #808080 solid;
   margin-left: 20px;
   padding: 5px;
   cursor: pointer;
@@ -229,4 +232,173 @@
   margin: 0 auto;
   margin-top: 50px;
   width: 500px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .containerCartPage {
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+  }
+
+  .ringkasanBelanja {
+    display: none;
+  }
+
+  .ringkasanBelanjaMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 720px;
+    height: 250px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .ringkasanBelanjaMobile h2 {
+    text-align: center;
+    margin-top: 0px;
+  }
+
+  .checkboxAction {
+    width: 730px;
+    height: 55px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+  }
+
+  .itemsCartUserBox {
+    width: 650px;
+    margin: 0 auto;
+  }
+
+  .wishListItemWraper {
+    flex-direction: column;
+    align-items: center;
+    height: 170px;
+  }
+
+  .wishListCollection {
+    width: 650px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+
+  .slick-slide {
+    height: 450px;
+  }
+
+  .slick-list {
+    height: 450px;
+  }
+
+  .slick-track {
+    height: 450px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .containerCartPage {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px;
+  }
+
+  .ringkasanBelanja {
+    display: none;
+  }
+
+  .ringkasanBelanjaMobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 340px;
+    height: 200px;
+    padding: 10px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+    border-radius: 5px;
+  }
+
+  .ringkasanBelanjaMobile h2 {
+    font-size: 18px;
+    text-align: center;
+  }
+
+  .checkboxAction {
+    width: 370px;
+    height: 55px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    margin-top: 50px;
+  }
+
+  .itemsCartUserBox {
+    width: 280px;
+    margin: 0 auto;
+  }
+
+  .cartItems {
+    align-items: center;
+  }
+
+  .cartItems img {
+    width: 100px;
+    height: 100px;
+    margin-right: 0px;
+  }
+
+  .descItem {
+    margin-left: 10px;
+  }
+
+  .descItem h3 {
+    font-size: 15px;
+  }
+
+  .descItem p {
+    font-size: 12px;
+    margin-top: 0px;
+    margin-bottom: 5px;
+  }
+
+  .descItem h4 {
+    font-size: 15px;
+  }
+
+  .cartAction {
+    justify-content: center;
+    margin-top: 20px;
+  }
+
+  .iconDeleteProduct svg {
+    width: 20px;
+  }
+
+  .btnInput {
+    width: 35px;
+    height: 35px;
+  }
+
+  .wishListCollection {
+    width: 255px;
+    height: 300px;
+    margin: 0 auto;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
+
+  .emptyCartPage {
+    width: 250px;
+  }
+
+  .emptyCartPage p:last-child {
+    font-size: 13px;
+  }
 }

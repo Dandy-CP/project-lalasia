@@ -6,3 +6,27 @@
 
   padding-top: 50px;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .productSearchbox input,
+  .productPageSearchbox input {
+    width: 650px;
+    height: 84px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .productSearchbox input,
+  .productPageSearchbox input {
+    width: 350px;
+    height: 54px;
+  }
+
+  .productSearchbox input[search="search"],
+  .productPageSearchbox input[type="text"] {
+    background-position: 10px 10px;
+    background-repeat: no-repeat;
+    font-size: 15px;
+    padding-left: 55px;
+  }
+}

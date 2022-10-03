@@ -105,10 +105,10 @@
   text-decoration: none;
 }
 
-@media screen and (min-device-width: 640px) and (max-device-width: 1024px) {
+@media screen and (min-width: 767px) and (max-width: 1023px) {
   .Navigation {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 
   .ListMenu {
@@ -121,10 +121,14 @@
 
   .ButtonNav button {
     margin-left: 0px;
+  }
+
+  .ButtonUserLogin {
+    display: none;
   }
 }
 
-@media screen and (max-device-width: 639px) {
+@media screen and (max-width: 767px) {
   .Navigation {
     padding-left: 20px;
     padding-right: 20px;
@@ -140,5 +144,9 @@
 
   .ButtonNav button {
     margin-left: 0px;
+  }
+
+  .logomobile {
+    width: 110px;
   }
 }

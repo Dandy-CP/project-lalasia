@@ -19,7 +19,7 @@ const ModalDetailOrder = ({ buyDetail, onClose }) => {
     buyDetail.map((data) => {
       return setGetProductRebuy(data.itemCheckout);
     });
-  }, []);
+  }, [buyDetail]);
 
   const reBuyRef = doc(db, "users", `${user?.email}`);
   const AddRebuyProduct = async (itemID) => {

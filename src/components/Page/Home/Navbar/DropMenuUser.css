@@ -86,3 +86,15 @@
 .pembelianBtn a {
   margin-left: 20px;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .btnUserAccount {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btnUserAccount {
+    display: none;
+  }
+}

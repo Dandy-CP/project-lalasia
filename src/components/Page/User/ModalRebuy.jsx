@@ -19,7 +19,7 @@ const ModalRebuy = ({ productRebuy, onClose }) => {
     productRebuy.map((list) => {
       return setItemProductRebuy(list.itemCheckout);
     });
-  }, []);
+  }, [productRebuy]);
 
   const rebuyProductRef = doc(db, "users", `${user?.email}`);
   const RebuyProduct = async (itemID) => {

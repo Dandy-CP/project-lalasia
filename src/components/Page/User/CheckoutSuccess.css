@@ -94,3 +94,62 @@
   width: 700px;
   text-align: center;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .countDownTimer {
+    width: 700px;
+  }
+
+  .jumlahPembayaran {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .ContainerCheckoutSuccess {
+    padding: 0px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .ContainerCheckoutSuccess h2:first-child {
+    font-size: 20px;
+  }
+
+  .countDownTimer {
+    width: 300px;
+  }
+
+  .countDownTimer h3 {
+    font-size: 15px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .countDownTimer p {
+    width: 280px;
+    font-size: 13px;
+  }
+
+  .transfer {
+    width: 300px;
+  }
+
+  .transfer h3 {
+    font-size: 18px;
+  }
+
+  .jumlahPembayaran {
+    width: 300px;
+  }
+
+  .infoStatement {
+    width: 340px;
+    font-size: 15px;
+    margin-bottom: 50px;
+  }
+
+  .line {
+    width: 300px;
+  }
+}

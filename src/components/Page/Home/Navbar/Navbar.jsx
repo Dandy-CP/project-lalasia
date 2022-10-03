@@ -26,6 +26,7 @@ import EmptyCartImg from "../../../assets/EmptyCart.png";
 
 const Navbar = () => {
   const [userCart, setUserCart] = useState([]);
+  const [isOpen, setOpen] = useState(false);
   const { user, logOut } = UserAuth();
   const navigate = useNavigate();
   const activeClassName = "Active";
@@ -47,38 +48,85 @@ const Navbar = () => {
 
   const itemCount = Array.isArray(userCart) ? userCart.length : null;
 
+  const handleIsOpen = () => {
+    setOpen(!isOpen)
+  }
+
+  const closeSideBar = () => {
+    setOpen(false)
+  }
+
   return (
     <div className="Navigation">
-      <img src={Logo} alt="Logo" />
+      <img src={Logo} alt="Logo" className="logomobile"/>
 
       <div className="hamburgermenumobile">
+        <div className="cartMenuMobile">
+          <Link to="/cart">
+            {itemCount === 0 ? (
+              <React.Fragment>
+                <button className="btnUserCartMobile">
+                  <FontAwesomeIcon icon={faCartFlatbed} size="xl" />
+                </button>
+              </React.Fragment>
+            ) : (
+              <React.Fragment>
+                <button className="btnUserCartMobile">
+                  <FontAwesomeIcon icon={faCartFlatbed} size="xl" />
+                  <div className="itemCounter">{itemCount}</div>
+                </button>
+              </React.Fragment>
+            )}
+          </Link>
+        </div>
+
         <Menu
           width={"100%"}
           customBurgerIcon={<img src={MenuHamburgerIcon} />}
           customCrossIcon={<img src={CrossIcon} />}
+          isOpen={isOpen}
+          onOpen={handleIsOpen}
+          onClose={handleIsOpen}
           right
         >
           <div className="ButtonNav">
-            <button>
-              <FontAwesomeIcon icon={faCartFlatbed} size="xl" />
-            </button>
-            <button>
-              <img src={UserProfilePict} alt="" />
-            </button>
+            <div className="profileNcart">
+              <div className="profileNname">
+                <img src={UserProfilePict} alt="" width={50} />
+                <p>{user.email}</p>
+              </div>
+              <div className="menuUser">
+                <div className="profileBtn">
+                  <FontAwesomeIcon icon={faUser} size="sm" />
+                  <Link to="/profile" onClick={closeSideBar}>Profile Saya</Link>
+                </div>
+
+                <div className="pembelianBtn">
+                  <FontAwesomeIcon icon={faCashRegister} size="sm" />
+                  <Link to="/orderList" onClick={closeSideBar}>Pembelian</Link>
+                </div>
+
+                <div className="logOutBtn">
+                  <FontAwesomeIcon icon={faArrowRightFromBracket} size="sm" />
+                  <a onClick={() => {handleLogout(); closeSideBar();}}>Log Out</a>
+                </div>
+              </div>
+            </div>
           </div>
-          <Link className="menu-item" to="/">
+
+          <Link className="menu-item" to="/" onClick={closeSideBar}>
             Home
           </Link>
 
-          <Link className="menu-item" to="/product">
+          <Link className="menu-item" to="/product" onClick={closeSideBar}>
             Product
           </Link>
 
-          <Link className="menu-item" to="/service">
+          <Link className="menu-item" to="/service" onClick={closeSideBar}>
             Service
           </Link>
 
-          <Link className="menu-item" to="/about">
+          <Link className="menu-item" to="/about" onClick={closeSideBar}>
             About
           </Link>
         </Menu>

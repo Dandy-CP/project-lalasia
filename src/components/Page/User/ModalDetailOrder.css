@@ -180,3 +180,95 @@
   display: flex;
   justify-content: space-between;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .containerDetailOrder {
+    width: 650px;
+    height: 650px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .containerDetailOrder {
+    width: 300px;
+    top: -30%;
+    left: 50%;
+  }
+
+  .lineBreakDetail {
+    margin: 0px;
+    border: 2px dotted black;
+  }
+
+  .invoice p {
+    font-size: 13px;
+  }
+
+  .dateBuy p {
+    font-size: 13px;
+  }
+
+  .productHistoryList {
+    padding: 8px;
+  }
+
+  .productHistoryList img {
+    width: 60px;
+    height: 60px;
+  }
+
+  .detailProductHistory {
+    width: 130px;
+    margin-left: 5px;
+  }
+
+  .detailProductHistory h3 {
+    font-size: 10px;
+  }
+
+  .detailProductHistory p {
+    font-size: 10px;
+  }
+
+  .hargaNrebuy {
+    margin-left: 5px;
+  }
+
+  .hargaNrebuy h3 {
+    font-size: 10px;
+  }
+
+  .hargaNrebuy h4 {
+    font-size: 10px;
+  }
+
+  .infoPengiriman p {
+    font-size: 11px;
+  }
+
+  .kurir {
+    display: flex;
+    justify-content: space-between;
+    width: 140px;
+  }
+
+  .alamat {
+    display: flex;
+  }
+
+  .detailAlamat {
+    margin-left: 60px;
+  }
+
+  .detailAlamat p {
+    margin: 0px;
+  }
+
+  .rincianPembayaran p {
+    font-size: 12px;
+  }
+
+  .totalBelanja h3 {
+    font-size: 14px;
+  }
+}

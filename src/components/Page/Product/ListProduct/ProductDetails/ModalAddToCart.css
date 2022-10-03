@@ -13,7 +13,7 @@
   height: 650px;
   padding: 20px;
   position: fixed;
-  top: -25%;
+  bottom: 50%;
   left: 50%;
   transform: translate(-50%, 50%);
   background-color: #f9f9f9;
@@ -122,4 +122,53 @@
   margin-top: 10px;
   margin-left: 10px;
   padding-bottom: 20px;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .containerModalAddToCart {
+    width: 700px;
+    height: 500px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .containerModalAddToCart {
+    width: 300px;
+    height: 500px;
+  }
+
+  .morePorductWrap {
+    flex-wrap: wrap;
+  }
+
+  .thisProduct {
+    flex-direction: column;
+  }
+
+  .procutName {
+    width: 200px;
+    margin-left: 0px;
+    text-align: center;
+  }
+
+  .productMoreList {
+    width: 130px;
+    margin: 0 auto;
+  }
+
+  .productMoreList img {
+    width: 130px;
+  }
+
+  .productMoreList p {
+    font-size: 13px;
+  }
+
+  .productMoreList h1 {
+    font-size: 15px;
+  }
+
+  .productMoreList h2 {
+    font-size: 15px;
+  }
 }

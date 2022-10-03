@@ -34,3 +34,49 @@
   width: 400px;
   font-size: 24px;
 }
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .discountoffer {
+    width: 93px;
+    height: 35px;
+    font-size: 10px;
+  }
+
+  .textcarousel {
+    width: 500px;
+    margin-left: 50px;
+    top: 15%;
+  }
+
+  .textcarousel h1 {
+    font-size: 20px;
+  }
+
+  .textcarousel h2 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .discountoffer {
+    display: flex;
+    align-items: center;
+    width: 60px;
+    height: 20px;
+    font-size: 10px;
+  }
+
+  .textcarousel {
+    width: 500px;
+    margin-left: 10px;
+    top: 15%;
+  }
+
+  .textcarousel h1 {
+    font-size: 18px;
+  }
+
+  .textcarousel h2 {
+    font-size: 13px;
+  }
+}

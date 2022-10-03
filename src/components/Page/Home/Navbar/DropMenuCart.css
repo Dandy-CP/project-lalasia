@@ -97,3 +97,23 @@
 .emptyCart p {
   text-align: center;
 }
+
+@media screen and (min-dwidth: 767px) and (max-width: 1023px) {
+  .btnUserCart {
+    display: none;
+  }
+
+  .dropDownCart {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .btnUserCart {
+    display: none;
+  }
+
+  .dropDownCart {
+    display: none;
+  }
+}
