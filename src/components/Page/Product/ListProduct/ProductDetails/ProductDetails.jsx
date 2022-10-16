@@ -15,6 +15,7 @@ import axios from "axios";
 import RelatedList from "./ProductRelated/RelatedList";
 import Quantitiy from "./Quantitiy";
 import ModalAddToCart from "./ModalAddToCart";
+import { TabTitle } from "../../../../../utils/tabTitlePage";
 
 import "react-loading-skeleton/dist/skeleton.css";
 import "../ProductDetails/ProductDetails.css";
@@ -83,7 +84,7 @@ const ProductDetails = () => {
         }),
       });
     } else {
-      alert("Login terlebih dahulu Untuk Melanjutkan");
+      navigate("../../login");
     }
   };
 
@@ -102,7 +103,7 @@ const ProductDetails = () => {
       });
       navigate(`../../checkout`);
     } else {
-      alert("Login terlebih dahulu Untuk Melanjutkan");
+      navigate("../../login");
     }
   };
 
@@ -120,6 +121,8 @@ const ProductDetails = () => {
       draggable: true,
       progress: undefined,
     });
+
+    TabTitle(`Lalasia | ${product.nama}`);
 
   return (
     <React.Fragment>

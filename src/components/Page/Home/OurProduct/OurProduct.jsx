@@ -10,9 +10,7 @@ const OurProduct = () => {
         <p>Our Product</p>
         <h2>Crafted by talented and high quality material</h2>
         <h3>
-          Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim
-          placerat nisi, adipiscing mauris non purus parturient. morbi
-          fermentum, vivamus et accumsan dui tincidunt pulvinar
+        The furniture is crafted with talented and high quality material. The designs are beautifully done and the furniture is made to last. The quality of the materials make it so that the furniture can last for years.
         </h3>
         <button>Learn More</button>
         <img src={ImgOurProdut} alt="ImgOurProduct" />

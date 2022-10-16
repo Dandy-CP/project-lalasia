@@ -283,7 +283,7 @@
 
   .wishListCollection {
     width: 650px;
-    height: 300px;
+    height: 350px;
     margin: 0 auto;
     margin-top: 20px;
   }
@@ -388,7 +388,7 @@
 
   .wishListCollection {
     width: 255px;
-    height: 300px;
+    height: auto;
     margin: 0 auto;
     margin-top: 20px;
     margin-bottom: 50px;

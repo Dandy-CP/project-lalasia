@@ -11,7 +11,6 @@ const ListCategories = ({setActiveProduct, activeProduct, setFiltered, product})
       return barang.category.id === activeProduct;
     });
     setFiltered(filtered);
-    console.log(filtered);
   }, [activeProduct]);
 
   return (

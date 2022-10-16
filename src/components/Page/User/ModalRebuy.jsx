@@ -25,9 +25,7 @@ const ModalRebuy = ({ productRebuy, onClose }) => {
   const RebuyProduct = async (itemID) => {
     if (user?.email) {
       try {
-        const getIdProduct = itemProductRebuy.filter(
-          (data) => data.id === itemID
-        );
+        const getIdProduct = itemProductRebuy.filter((data) => data.id === itemID);
         getIdProduct.map((data) => {
           updateDoc(rebuyProductRef, {
             cartProduct: arrayUnion({

@@ -57,8 +57,7 @@ export default class Carousel extends Component {
           <h1>Our popular product</h1>
           <div className="desccarausel">
             <p>
-              Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
-              dignissim placerat nisi, adipiscing mauris non purus parturient.
+            This popular furniture product is an all-purpose piece of furniture that is sturdy and reliable. It's made of a strong and sturdy wood and it can be used as a dining room table, or a coffee table, or a desk. It's also a great option for a game room, or a family room.
             </p>
           </div>
         </div>

@@ -9,6 +9,8 @@ import { faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
 import bannerProfile from "../../assets/bannerProfile.png";
 import userAvatar from "../../assets/blank-profile-picture.png";
+import emptyWishList from "../../assets/EmptyWishList.svg";
+import { TabTitle } from "../../../utils/tabTitlePage";
 
 import "../User/Profile.css";
 import "../Product/ListProduct/ItemProduct.css";
@@ -18,6 +20,7 @@ const Profile = () => {
   const [like, setLike] = useState(true);
   const { user } = UserAuth();
   const navigate = useNavigate();
+  TabTitle(`Lalasia | Profile ${user?.email}`);
 
   useEffect(() => {
     onSnapshot(doc(db, "users", `${user?.email}`), (doc) => {
@@ -40,6 +43,8 @@ const Profile = () => {
     }
   };
 
+  const SavedProductCount = Array.isArray(savedProduct) ? savedProduct.length : null;
+
   return (
     <React.Fragment>
       <div className="containerProfile">
@@ -60,31 +65,41 @@ const Profile = () => {
       </div>
 
       <div className="userSavedProduct">
-        {Array.isArray(savedProduct)
-          ? savedProduct.map((item) => (
-              <div className="itemProduct" key={item.id}>
-                <div className="itemWraper">
-                  <a
-                    onClick={() =>
-                      navigate(`../product/${item.category}/${item.id}`)
-                    }
-                  >
-                    <img src={item?.img} alt="ProductImage" />
-                    <h1>{item?.nama}</h1>
-                    <p>{item?.tagline}</p>
-                    <h2>Rp.{numberWithCommas(item?.harga)}</h2>
-                  </a>
-                  <span
-                    style={{ cursor: "pointer" }}
-                    onClick={() => deleteProduct(item.id)}
-                    className="iconDeleteProduct"
-                  >
-                    <FontAwesomeIcon icon={faTrashCan} size="xl" />
-                  </span>
-                </div>
-              </div>
-            ))
-          : null}
+        {SavedProductCount === 0 ? (
+          <div className="emptyWishList">
+            <img src={emptyWishList} alt="emptywishlist" width={300} />
+            <h2>Tampak Nya Kamu Belum memasukan produk ke dalam Wishlist</h2>
+            <p>Masuk menu product dan pilih produk yang ingin kamu sukai</p>
+          </div>
+        ) : (
+          <>
+            {Array.isArray(savedProduct)
+              ? savedProduct.map((item) => (
+                  <div className="itemProduct" key={item.id}>
+                    <div className="itemWraper">
+                      <a
+                        onClick={() =>
+                          navigate(`../product/${item.category}/${item.id}`)
+                        }
+                      >
+                        <img src={item?.img} alt="ProductImage" />
+                        <h1>{item?.nama}</h1>
+                        <p>{item?.tagline}</p>
+                        <h2>Rp.{numberWithCommas(item?.harga)}</h2>
+                      </a>
+                      <span
+                        style={{ cursor: "pointer" }}
+                        onClick={() => deleteProduct(item.id)}
+                        className="iconDeleteProduct"
+                      >
+                        <FontAwesomeIcon icon={faTrashCan} size="xl" />
+                      </span>
+                    </div>
+                  </div>
+                ))
+              : null}
+          </>
+        )}
       </div>
     </React.Fragment>
   );

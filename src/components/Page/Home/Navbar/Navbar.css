@@ -126,6 +126,15 @@
   .ButtonUserLogin {
     display: none;
   }
+
+  .loginNSignUpMobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnSignUp {
+    margin-right: 20px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -148,5 +157,14 @@
 
   .logomobile {
     width: 110px;
+  }
+
+  .loginNSignUpMobile {
+    display: flex;
+    justify-content: center;
+  }
+
+  .btnSignUp {
+    margin-right: 20px;
   }
 }

@@ -8,6 +8,7 @@ import { useParams } from "react-router-dom";
 
 import "./Invoice.css";
 import Logo from "../../assets/Logo.png";
+import { TabTitle } from "../../../utils/tabTitlePage";
 
 const Invoice = () => {
   const [invoiceData, setInvoiceData] = useState([]);
@@ -15,6 +16,8 @@ const Invoice = () => {
   let { invoice } = useParams();
   const getInvoice = invoice.split("-").join("/");
   const componentRef = useRef();
+  TabTitle(`Lalasia | ${getInvoice}`);
+
 
   const invoiceDataRef = collection(db, "users", `${user?.email}`, "orderHistory");
   const getInvoiceData = query(invoiceDataRef, where("invoice", "==", getInvoice));

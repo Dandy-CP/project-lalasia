@@ -5,6 +5,7 @@ import { onSnapshot, collection, query, where } from "firebase/firestore";
 import { Link, useParams } from "react-router-dom";
 import { numberWithCommas } from "../../../utils/numberWithCommas";
 import CountdownTimer from "./CountdownTimer";
+import { TabTitle } from "../../../utils/tabTitlePage";
 
 import "./CheckoutSuccess.css";
 
@@ -12,6 +13,7 @@ const CheckoutSuccess = () => {
   const [order, setOrder] = useState([]);
   const { user } = UserAuth();
   let { orderid } = useParams();
+  TabTitle("Lalasia | Checkout Suksess");
 
   const orderRef = collection(db, "users", `${user?.email}`, "orderHistory");
   const getOrder = query(orderRef, where("orderid", "==", `${orderid}`));

@@ -10,11 +10,11 @@ const Footer = () => {
         <p>
           Lalasia merupakan project Frontend mandiri. <br />
           Didesain oleh
-          <a href="https://www.figma.com/@sicleteam"> Sicle Team </a>
+          <a href="https://www.figma.com/@sicleteam" target="_blank"> Sicle Team </a>
           Dan di Coding Oleh
-          <a href="https://github.com/Dandy-CP"> Dandy Candra. </a>
+          <a href="https://github.com/Dandy-CP" target="_blank"> Dandy Candra. </a>
           <br />
-          <a href="">Selengkap Nya.</a>
+          <a href="https://github.com/Dandy-CP/project-lalasia" target="_blank">Selengkap Nya.</a>
         </p>
       </div>
       <div className="menufooter">

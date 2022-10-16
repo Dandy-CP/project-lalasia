@@ -12,6 +12,8 @@ import { ToastContainer, toast } from "react-toastify";
 import "./Cart.css";
 import "react-toastify/dist/ReactToastify.css";
 import EmptyCart from "../../assets/EmptyCart.png";
+import emptyWishList from "../../assets/EmptyWishList.svg";
+import { TabTitle } from "../../../utils/tabTitlePage";
 
 const Cart = () => {
   const [cartItem, setCartItem] = useState([]);
@@ -101,6 +103,9 @@ const Cart = () => {
   };
 
   const itemCount = Array.isArray(cartItem) ? cartItem.length : null;
+  const wishListCount = Array.isArray(wishListItem)
+    ? wishListItem.length
+    : null;
   /*   const itemCount = () => {
     return Array.isArray(cartItem)
       ? cartItem.filter((count) => {
@@ -176,6 +181,8 @@ const Cart = () => {
       draggable: true,
       progress: undefined,
     });
+
+    TabTitle(`Lalasia | Cart (${itemCount})`);
 
   return (
     <React.Fragment>
@@ -316,27 +323,41 @@ const Cart = () => {
             <h2>Wujudkan Wish List Produk Anda</h2>
             <hr className="itemLineBreak" />
             <div className="wishListItem">
-              <Slider {...settings}>
-                {Array.isArray(wishListItem)
-                  ? wishListItem.map((items) => (
-                      <React.Fragment key={items.id}>
-                        <div
-                          className="wishListItemWraper"
-                          onClick={() =>
-                            navigate(`../product/${items.category}/${items.id}`)
-                          }
-                        >
-                          <img src={items.img} alt={items.nama} width={100} />
-                          <div className="descWishlist">
-                            <h3>{items.nama}</h3>
-                            <p>{items.tagline}</p>
-                            <h4>Rp. {numberWithCommas(items.harga)}</h4>
+              {wishListCount === 0 ? (
+                <div className="emptyWishList">
+                  <img src={emptyWishList} alt="emptywishlist" width={300} />
+                  <h2>
+                    Tampak Nya Kamu Belum memasukan produk ke dalam Wishlist
+                  </h2>
+                  <p>
+                    Masuk menu product dan pilih produk yang ingin kamu sukai
+                  </p>
+                </div>
+              ) : (
+                <Slider {...settings}>
+                  {Array.isArray(wishListItem)
+                    ? wishListItem.map((items) => (
+                        <React.Fragment key={items.id}>
+                          <div
+                            className="wishListItemWraper"
+                            onClick={() =>
+                              navigate(
+                                `../product/${items.category}/${items.id}`
+                              )
+                            }
+                          >
+                            <img src={items.img} alt={items.nama} width={100} />
+                            <div className="descWishlist">
+                              <h3>{items.nama}</h3>
+                              <p>{items.tagline}</p>
+                              <h4>Rp. {numberWithCommas(items.harga)}</h4>
+                            </div>
                           </div>
-                        </div>
-                      </React.Fragment>
-                    ))
-                  : null}
-              </Slider>
+                        </React.Fragment>
+                      ))
+                    : null}
+                </Slider>
+              )}
             </div>
           </div>
         </div>

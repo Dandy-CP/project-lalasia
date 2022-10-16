@@ -11,7 +11,7 @@ import {
 const AuthContext = createContext();
 
 export function AuthContextProvider({ children }) {
-  const [user, setUser] = useState({});
+  const [user, setUser] = useState([]);
 
   function signUp(email, password) {
     createUserWithEmailAndPassword(auth, email, password);
@@ -19,8 +19,6 @@ export function AuthContextProvider({ children }) {
       savedProduct: [],
       cartProduct: [],
       checkoutProduct: [],
-      buyHistory: [],
-      viewHistory: [],
       address: [],
     });
   }
@@ -40,7 +38,7 @@ export function AuthContextProvider({ children }) {
     return () => {
       unsubscribe();
     };
-  });
+  },[]);
 
   return (
     <AuthContext.Provider value={{ signUp, logIn, logOut, user }}>

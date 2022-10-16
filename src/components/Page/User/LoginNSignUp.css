@@ -18,7 +18,7 @@
   display: flex;
   justify-content: center;
   width: 600px;
-  height: 600px;
+  height: 610px;
   background-color: white;
   border-radius: 10px;
   box-shadow: 0 10px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
@@ -26,9 +26,18 @@
 
 .logoContex {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   margin-top: 0px;
   margin-bottom: 10px;
+}
+
+.logoContex h1 {
+  text-align: center;
+  margin-bottom: 0px;
+  margin-top: 0px;
+  font-size: 30px;
+  display: none;
 }
 
 .logoContex a {
@@ -121,4 +130,69 @@
   width: 30px;
   float: inline-start;
   margin-left: 10px;
+}
+
+.logoLalasia {
+  display: none;
+}
+
+.errMsg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: red;
+  color: white;
+  font-weight: 600;
+  height: 40px;
+  border-radius: 5px;
+  margin: 0px;
+}
+
+@media screen and (max-width: 767px) {
+  .backgroundImage {
+    background-image: none;
+    background-position: center;
+  }
+
+  .inputContex {
+    width: 100vw;
+    height: 100vh;
+  }
+
+  .logoLalasia {
+    display: block;
+    position: absolute;
+    bottom: 90%;
+  }
+
+  .logoContex img {
+    display: none;
+  }
+
+  .logoContex h1 {
+    display: block;
+    text-align: center;
+    margin-bottom: 0px;
+    margin-top: 0px;
+    font-size: 30px;
+  }
+
+  .inputContex form {
+    margin: auto;
+    width: 350px;
+  }
+
+  .loginGoogle h4,
+  .loginFacebook h4 {
+    font-size: 15px;
+    margin-top: 5px;
+    margin-right: 5px;
+  }
+
+  .loginGoogle img {
+    width: 25px;
+  }
+  .loginFacebook img {
+    width: 25px;
+  }
 }

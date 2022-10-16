@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { UserAuth } from "../../context/authContext";
+import { TabTitle } from "../../../utils/tabTitlePage";
 
 import Logo from "../../assets/Logo.png";
 import GoogleIcon from "../../assets/GoogleIcon.png";
@@ -11,18 +12,26 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
-  const { user, logIn } = UserAuth();
+  const [errorFirebase, setErrorFirebase] = useState("");
+  const { logIn } = UserAuth();
   const navigate = useNavigate();
+  TabTitle("Lalasia | Login");
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError("");
     try {
-      await logIn(email, password);
-      navigate("/");
+      if (email === "") {
+        setError("Email Invalid");
+      } else if (password === "") {
+        setError("Password Invalid");
+      } else {
+        await logIn(email, password);
+        navigate("/");
+      }
     } catch (error) {
       console.log(error);
-      setError(error.message);
+      setErrorFirebase(error.message);
     }
   };
 
@@ -30,13 +39,19 @@ const Login = () => {
     <React.Fragment>
       <div className="backgroundImage"></div>
       <div className="containerAuthContex">
-        {error ? <p>{error}</p> : null}
         <div className="inputContex">
           <form onSubmit={handleSubmit}>
+            <div className="logoLalasia">
+              <Link to="/">
+                <img src={Logo} alt="" draggable="false" />
+              </Link>
+            </div>
+
             <div className="logoContex">
               <Link to="/">
                 <img src={Logo} alt="" draggable="false" />
               </Link>
+              <h1>Selamat Datang Kembali Di Lalasia</h1>
             </div>
 
             <span>
@@ -54,6 +69,9 @@ const Login = () => {
             </button>
 
             <h5>Atau</h5>
+
+            {error ? <p className="errMsg">{error}</p> : null}
+            {errorFirebase ? <p className="errMsg">{errorFirebase}</p> : null}
 
             <input
               type="text"

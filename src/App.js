@@ -5,8 +5,6 @@ import ProtectedRoute from "./utils/ProtectedRoute";
 
 import Home from "./components/Page/Home/Home";
 import Product from "./components/Page/Product/Product";
-import ServicePage from "./components/Page/ServicePage/ServicePage";
-import About from "./components/Page/About/About";
 import NoPage from "./components/Page/NoPage404/NoPage";
 import Routing from "./utils/routing";
 import ProductDetails from "./components/Page/Product/ListProduct/ProductDetails/ProductDetails";
@@ -42,6 +40,8 @@ function App() {
               </ProtectedRoute>
             } />
 
+            <Route path="*" element={<NoPage />} />
+
             <Route path="/" element={<Routing />}>
               <Route index element={<Home />} />
               <Route path="product" element={<Product />} />
@@ -70,10 +70,6 @@ function App() {
                 <CheckoutSuccess />
               </ProtectedRoute>
             } />
-
-              <Route path="service" element={<ServicePage />} />
-              <Route path="about" element={<About />} />
-              <Route path="*" element={<NoPage />} />
             </Route>
           </Routes>
         </AuthContextProvider>

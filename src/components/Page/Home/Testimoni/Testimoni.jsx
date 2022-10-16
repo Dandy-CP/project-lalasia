@@ -49,8 +49,7 @@ export default class Testimoni extends Component {
           </div>
           <div className="desctesti">
             <h3>
-              Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
-              dignissim placerat nisi, adipiscing mauris non purus parturient.
+            Our custom furniture is made with you in mind. Our furniture is designed for comfort and quality. Our chairs are designed with your comfort in mind and the perfect balance of style and comfort.
             </h3>
           </div>
         </div>

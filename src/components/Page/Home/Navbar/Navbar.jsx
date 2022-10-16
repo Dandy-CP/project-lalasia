@@ -49,36 +49,42 @@ const Navbar = () => {
   const itemCount = Array.isArray(userCart) ? userCart.length : null;
 
   const handleIsOpen = () => {
-    setOpen(!isOpen)
-  }
+    setOpen(!isOpen);
+  };
 
   const closeSideBar = () => {
-    setOpen(false)
-  }
+    setOpen(false);
+  };
 
   return (
     <div className="Navigation">
-      <img src={Logo} alt="Logo" className="logomobile"/>
+      <Link to="/">
+        <img src={Logo} alt="Logo" className="logomobile" />
+      </Link>
 
       <div className="hamburgermenumobile">
-        <div className="cartMenuMobile">
-          <Link to="/cart">
-            {itemCount === 0 ? (
-              <React.Fragment>
-                <button className="btnUserCartMobile">
-                  <FontAwesomeIcon icon={faCartFlatbed} size="xl" />
-                </button>
-              </React.Fragment>
-            ) : (
-              <React.Fragment>
-                <button className="btnUserCartMobile">
-                  <FontAwesomeIcon icon={faCartFlatbed} size="xl" />
-                  <div className="itemCounter">{itemCount}</div>
-                </button>
-              </React.Fragment>
-            )}
-          </Link>
-        </div>
+        {user?.email ? (
+          <div className="cartMenuMobile">
+            <Link to="/cart">
+              {itemCount === 0 ? (
+                <React.Fragment>
+                  <button className="btnUserCartMobile">
+                    <FontAwesomeIcon icon={faCartFlatbed} size="xl" />
+                  </button>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <button className="btnUserCartMobile">
+                    <FontAwesomeIcon icon={faCartFlatbed} size="xl" />
+                    <div className="itemCounter">{itemCount}</div>
+                  </button>
+                </React.Fragment>
+              )}
+            </Link>
+          </div>
+        ) : (
+          <></>
+        )}
 
         <Menu
           width={"100%"}
@@ -90,28 +96,51 @@ const Navbar = () => {
           right
         >
           <div className="ButtonNav">
-            <div className="profileNcart">
-              <div className="profileNname">
-                <img src={UserProfilePict} alt="" width={50} />
-                <p>{user.email}</p>
-              </div>
-              <div className="menuUser">
-                <div className="profileBtn">
-                  <FontAwesomeIcon icon={faUser} size="sm" />
-                  <Link to="/profile" onClick={closeSideBar}>Profile Saya</Link>
+            {user?.email ? (
+              <div className="profileNcart">
+                <div className="profileNname">
+                  <img src={UserProfilePict} alt="" width={50} />
+                  <p>{user.email}</p>
                 </div>
+                <div className="menuUser">
+                  <div className="profileBtn">
+                    <FontAwesomeIcon icon={faUser} size="sm" />
+                    <Link to="/profile" onClick={closeSideBar}>
+                      Profile Saya
+                    </Link>
+                  </div>
 
-                <div className="pembelianBtn">
-                  <FontAwesomeIcon icon={faCashRegister} size="sm" />
-                  <Link to="/orderList" onClick={closeSideBar}>Pembelian</Link>
-                </div>
+                  <div className="pembelianBtn">
+                    <FontAwesomeIcon icon={faCashRegister} size="sm" />
+                    <Link to="/orderList" onClick={closeSideBar}>
+                      Pembelian
+                    </Link>
+                  </div>
 
-                <div className="logOutBtn">
-                  <FontAwesomeIcon icon={faArrowRightFromBracket} size="sm" />
-                  <a onClick={() => {handleLogout(); closeSideBar();}}>Log Out</a>
+                  <div className="logOutBtn">
+                    <FontAwesomeIcon icon={faArrowRightFromBracket} size="sm" />
+                    <a
+                      onClick={() => {
+                        handleLogout();
+                        closeSideBar();
+                      }}
+                    >
+                      Log Out
+                    </a>
+                  </div>
                 </div>
               </div>
-            </div>
+            ) : (
+              <div className="loginNSignUpMobile">
+                <Link to="/signup">
+                  <button className="btnSignUp"> SignUp </button>
+                </Link>
+
+                <Link to="/login">
+                  <button className="btnLogIn"> LogIn </button>
+                </Link>
+              </div>
+            )}
           </div>
 
           <Link className="menu-item" to="/" onClick={closeSideBar}>
@@ -122,13 +151,9 @@ const Navbar = () => {
             Product
           </Link>
 
-          <Link className="menu-item" to="/service" onClick={closeSideBar}>
-            Service
-          </Link>
-
-          <Link className="menu-item" to="/about" onClick={closeSideBar}>
-            About
-          </Link>
+          <a href="https://github.com/Dandy-CP/project-lalasia" className="menu-item" target="_blank">
+              About Project
+          </a>
         </Menu>
       </div>
 
@@ -157,25 +182,9 @@ const Navbar = () => {
           </li>
 
           <li className="Menu">
-            <NavLink
-              to="/service"
-              className={({ isActive }) =>
-                isActive ? activeClassName : undefined
-              }
-            >
-              Service
-            </NavLink>
-          </li>
-
-          <li className="Menu">
-            <NavLink
-              to="/about"
-              className={({ isActive }) =>
-                isActive ? activeClassName : undefined
-              }
-            >
-              About
-            </NavLink>
+            <a href="https://github.com/Dandy-CP/project-lalasia" target="_blank">
+              About Project
+            </a>
           </li>
         </ul>
       </nav>

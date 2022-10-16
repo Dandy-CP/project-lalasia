@@ -1,18 +1,12 @@
 import React, { useEffect, useState } from "react";
 import { UserAuth } from "../../context/authContext";
-import {
-  updateDoc,
-  doc,
-  onSnapshot,
-  arrayRemove,
-  collection,
-  addDoc,
-} from "firebase/firestore";
+import { updateDoc, doc, onSnapshot, arrayRemove, collection, addDoc } from "firebase/firestore";
 import { db } from "../../../utils/firebaseConfig";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { numberWithCommas } from "../../../utils/numberWithCommas";
 import { v4 as uuid } from "uuid";
 import AddressModal from "./AddressModal";
+import ModalEditAddress from "./ModalEditAddress";
 import BackPageModal from "./BackPageModal";
 
 import "./CheckOut.css";
@@ -21,6 +15,7 @@ import Logo from "../../assets/Logo.png";
 import Mandiri from "../../assets/mandiri.png";
 import BCA from "../../assets/BCA.png";
 import BRI from "../../assets/BRI.png";
+import { TabTitle } from "../../../utils/tabTitlePage";
 
 const CheckOut = () => {
   const [itemCheckout, setItemCheckout] = useState([]);
@@ -30,10 +25,12 @@ const CheckOut = () => {
   const [jenisKurir, setJenisKurir] = useState("");
   const [bank, setBank] = useState("");
   const [modalAddress, setModalAddress] = useState(false);
+  const [modalEditAddress, setModalEditAddress] = useState(false);
   const [modalConfirmBack, setModalConfirmBack] = useState(false);
   const { user } = UserAuth();
   const unique_id = uuid().slice(0, 8);
   const navigate = useNavigate();
+  TabTitle("Lalasia | Checkout");
 
   const kurir = [
     {
@@ -150,11 +147,10 @@ const CheckOut = () => {
   const totalTagihan = parseInt(ongkir) + totalHarga;
   const itemCount = Array.isArray(itemCheckout) ? itemCheckout.length : null;
   const addressCount = Array.isArray(address) ? address.length : null;
+  const userAddress = Array.isArray(address) ? address : null;
 
   const current = new Date();
-  const date = `${current.getDate()}/${
-    current.getMonth() + 1
-  }/${current.getFullYear()} ${current.getHours()}:${current.getMinutes()} WIB`;
+  const date = `${current.getDate()}/${current.getMonth() + 1}/${current.getFullYear()} ${current.getHours()}:${current.getMinutes()} WIB`;
 
   let minNumber = 1000;
   let maxNumber = 9999;
@@ -168,15 +164,24 @@ const CheckOut = () => {
         open={modalAddress}
         onClose={() => setModalAddress(false)}
       />
+
+      <ModalEditAddress 
+      open={modalEditAddress}
+      onClose={() => setModalEditAddress(false)}
+      address={userAddress}
+      />
+
       {modalConfirmBack && (
         <BackPageModal
           onClose={() => setModalConfirmBack(false)}
           onOk={onUserBack}
         />
       )}
+
       <div className="Navigation">
         <img src={Logo} alt="LogoLalasia" />
       </div>
+
       <div className="checkOutContainer">
         <div className="checkoutWrap">
           <div className="alamatUser">
@@ -201,14 +206,11 @@ const CheckOut = () => {
                   <p>
                     {data.alamat}, {data.kota}, {data.kodepos}
                   </p>
-                  <a href="#">Ubah Alamat</a>
+                  <a onClick={() => setModalEditAddress(true)} style={{cursor: "pointer"}}>Ubah Alamat</a>
                 </div>
               ))
             ) : null}
             <hr className="itemLineBreak" />
-
-            <button onClick={() => setModalAddress(true)}>Tambah Alamat</button>
-            {/* <button>Pilih Alamat</button> */}
           </div>
 
           <div className="itemCheckout">
@@ -325,7 +327,6 @@ const CheckOut = () => {
                 type="button"
                 className="btnBayar"
                 onClick={checkoutDone}
-                disabled={addressCount === 0 ? true : false}
               >
                 Bayar
               </button>

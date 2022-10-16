@@ -8,6 +8,7 @@ import { numberWithCommas } from "../../../utils/numberWithCommas";
 import "./OrderList.css";
 import ModalDetailOrder from "./ModalDetailOrder";
 import ModalRebuy from "./ModalRebuy";
+import { TabTitle } from "../../../utils/tabTitlePage";
 import BagShop from "../../assets/bag-2.png";
 
 const OrderList = () => {
@@ -16,13 +17,9 @@ const OrderList = () => {
   const [rebuyProduct, setRebuyProduct] = useState([]);
   const [searchParams, setSearchParams] = useSearchParams();
   const { user } = UserAuth();
+  TabTitle("Lalasia | History Pembelian");
 
-  const orderListRef = collection(
-    db,
-    "users",
-    `${user?.email}`,
-    "orderHistory"
-  );
+  const orderListRef = collection(db, "users", `${user?.email}`, "orderHistory");
   useEffect(() => {
     onSnapshot(orderListRef, (doc) => {
       const orderedList = [];
@@ -35,18 +32,9 @@ const OrderList = () => {
   const orderListData = Array.isArray(orderList) ? orderList : null;
 
   const ShowOrderDetail = searchParams.get("detail");
-  console.log(ShowOrderDetail);
 
-  const orderDetailRef = collection(
-    db,
-    "users",
-    `${user?.email}`,
-    "orderHistory"
-  );
-  const getOrderDetail = query(
-    orderDetailRef,
-    where("orderid", "==", ShowOrderDetail)
-  );
+  const orderDetailRef = collection(db, "users", `${user?.email}`, "orderHistory");
+  const getOrderDetail = query(orderDetailRef, where("orderid", "==", ShowOrderDetail));
   useEffect(() => {
     onSnapshot(getOrderDetail, (doc) => {
       const details = [];
@@ -57,13 +45,9 @@ const OrderList = () => {
     });
   }, [user?.email, ShowOrderDetail]);
   const buyDetailData = Array.isArray(buyDetail) ? buyDetail : null;
-  console.log(buyDetailData);
 
   const ShowRebuyProduct = searchParams.get("rebuy");
-  const getProductRebuy = query(
-    orderDetailRef,
-    where("orderid", "==", ShowRebuyProduct)
-  );
+  const getProductRebuy = query(orderDetailRef, where("orderid", "==", ShowRebuyProduct));
   useEffect(() => {
     onSnapshot(getProductRebuy, (doc) => {
       const rebuyProduct = [];

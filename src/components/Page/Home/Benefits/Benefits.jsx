@@ -15,8 +15,7 @@ const Benefits = () => {
         </div>
         <div className="descbenefits">
           <h3>
-            Pellentesque etiam blandit in tincidunt at donec. Eget ipsum
-            dignissim placerat nisi, adipiscing mauris non purus parturient.
+          Satisfaction Guaranteed. We will make sure that you are satisfied with your purchase, and we stand by our work.
           </h3>
         </div>
       </div>
@@ -25,17 +24,17 @@ const Benefits = () => {
         <BenefitsCard
           image={Icon1}
           title="Many Choice"
-          desc="Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non. "
+          desc="The furniture line by Many Choice is known for its sophisticated, high-quality designs and elegant silhouettes."
         />
         <BenefitsCard
           image={Icon2}
           title="Fast and Ontime"
-          desc="Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisi, adipiscing mauris non. "
+          desc="The package arrived in time for me to enjoy it. The customer service representative was friendly and helpful. "
         />
         <BenefitsCard
           image={Icon3}
           title="Affordable Price"
-          desc="Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim placerat nisadipiscing mauris non. "
+          desc="You're looking for a new furniture set and you're on a budget. this website will help you find a product that will fit your needs. "
         />
       </div>
     </div>

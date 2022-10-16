@@ -17,9 +17,7 @@ const Header = () => {
           <img src={ArrowIcon} alt="LineArrow" />
         </div>
         <p>
-          Pellentesque etiam blandit in tincidunt at donec. Eget ipsum dignissim
-          placerat nisi, adipiscing mauris non. Purus parturient viverra nunc,
-          tortor sit laoreet. Quam tincidunt aliquam adipiscing tempor.
+        An affordable and high-quality furniture line that offers its customers a chance to save money while looking at high-quality furniture. The furniture line offers a variety of styles to suit your personal taste.
         </p>
       </div>
 
