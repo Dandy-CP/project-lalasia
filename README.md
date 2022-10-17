@@ -1,5 +1,54 @@
-<p align="center">
-  <img src="./src/components/assets/Logo.png" />
-</p>
+## Project Lalasia
 
-<h1 align="center"> Project Lalasia On Going </h1>
+Lalasia is a standalone Frontend project.
+Designed by [Sicle Team](https://www.figma.com/@sicleteam)
+Coded by [Dandy Candra.](https://github.com/Dandy-CP)
+
+Preview Demo : https://project-lalasia.vercel.app/
+
+## Feature
+
+ - Authentication Using Firebase
+ - Add to cart
+ - Add to Wish list
+ - Add Address
+ - Price and ongkir based on product
+ - Checkout
+ - Checkout Success
+ - User Buy History
+ - Invoice
+
+## Stack Technology
+- Frontend : React JS
+- Styling : Native CSS
+- Icon : [Fontawesome](https://fontawesome.com/)
+- Loading Skeleton : [react-loading-skeleton](https://www.npmjs.com/package/react-loading-skeleton)
+- Carousel : [React-Slick](https://react-slick.neostack.com/)
+- Mobile Menu : [React-Hamburger](https://hamburger-react.netlify.app/)
+- Static API : [My JSON Server](https://my-json-server.typicode.com/Dandy-CP/database-lalasia)
+- Image Hosting : [freeimage.host](https://freeimage.host/)
+- Order ID : [UUIDV4](https://www.npmjs.com/package/uuidv4)
+- Invoice Print : [react-to-print](https://www.npmjs.com/package/react-to-print)
+- Fetching API : [Axios](https://www.npmjs.com/package/axios)
+- Backend and Authentication User : Firebase
+- Deploy : Vercel
+
+## Screenshoot
+
+<p align="center"> <img src="https://lh3.googleusercontent.com/XI9jyss3GlOAwvSW8_rxMhDodw0-Y2WhVH_ZVyTCVWFBRlM-TDhNsrJ_7MuEawgwDqen5MwM1n9_xZH2hpJ491fGfNz3BVDxOoDLSMNyxIwEoTVCvpsrmxIrw5r5oxOOzeBpC4wA9aQsz0MWZfmrsHpgv5R5iaCdd5ysHqu7NhgnKs0zmpeISzt4GixaBNdvZ-FvHD2L2MWwMubwprDjuAfEoj0SzQIaEEvvwRzWuiFVsYVAW9M8Vvhn8V-f8hzFn_soetHJa1HJ3x9LQzmwtt9cqraiJQcOYkV3ExwEPrJZm_zEFSoVcEkbtEiHWIbpC-PZ3PuCb5P8qlIjC4weshHgPs8U54zHTJAULNlfuTAiF6a6PI2P4RogqDgRpZ8NoRG5W1dw1gcUPQVKJ6BPHRx4G6UOGLRKzb3G1cNNCqESlyltlcRgwGmS1v5GsfS3yZcPLDCAoWHRSSV-KfWyDPGI022NnlJdI--0YfIt2LA4pDSyDNbMeIJ-5FxxTtux8i_j9gDNE1g3y1plbrMGtt_CVm0w-qw63-Bj41JKOzLLynNneG3BuiyZNIc-fWbFIpawYwtYOnTbom0yEoHHS8LcpCqoQK-xM_jOfSkV5HOpbanSVQW_UCu1AeN8wDjWV_19ej7CmuAzhMErCLiINGiRFxy4cx09cf_MgShlhxAaFdq9DkxGXJhvKxfbCBVlH4nY1M7-DNYbzb6-SUmXl3aYzjxLa2FKxn-R0cuuaLaTl0KhWrUO81qOW9zYKMenNtFs1QyZkgR4kjMIZHa1VctZJa5_0oxuBsSo1kofzcgKbbx2Oxcv_HPNFryDvBw_LtmSo5NmDiNnQilG7WWdYM6VcVzVZ80oT0eiCHYGqMP9n9Tpmt8M93169qUQRW9ZC-EYTcR3q9TLtV9OLBs51fPcbjKfYTj2eYWSMa2n6w4lxv3L8Dd20JCgJqwXTafYiunXgGyaW7g=w1532-h957-no?authuser=1" width="500"> </p>
+
+<p align="center"> <img src="https://lh3.googleusercontent.com/wRHYSA1tYBfSmHL6pbMAZNxOLcpGVnLjlFgKG5YN__TUpYoUU3zq6Yx9dZx5lIkUH4D5YMhdN_N-qaYx5ebrUESs_x6g5O-hJJpNeMG8q1sydAN6lSNotpItZsb09u-I6xusUPA0asvv6pV2o3PKCMh8eI5CppTopodgzxb2QSJBH6LGSFZUtpq6E-9rvnoe0paoUAj5hfnZ678eiMK9m0qsuIP9lep4_fTgD0C5ZlNRzDit2HPx3ihaHgradAX0dxJTt0EEO8tgUujljm4Af_9hL9Q1KG1LaPwPwhWDbx_60QJyVRd5Ws5nMqaBf3a2-KAMaA6ytd7RsP0CKI2GGKfkHkmfS0z_58SxQJUI1zZt1kWvKkHRPO5-UVk8F059QvVxRtIUdWP51p7H0ViGdA-TuRvJtVai_PDkupxgY2AvOohkGzZFqaX0mfGBPStlwCWba9ETUWM7B17mbIInLvdUyqouuDSePhnXs5sfKzXPyOCMyKBnjuTL6SkxkYVnItCp5WPiepIbCAMrQaSEfFh4WmcUeeWcOzp8jY_maAcD1jKfRt7gOjP2JsNhN9SQY_SE2fS0ViCtYg8D3vgJoEazbxdd6MRew8vx0gOV77N4U0t59RVop7c63kE4OQbhAZ2hmoXNO4sPVdNAqR2-Ng-bCkvwisWQH73lJdJVzKCBtH6iEOVZcHEUsEvfM7Tmpa1RfvpSVgCfBoC9GCHzX7kb1OvWEVQlQIEcMQRMRt22qweE4GFl-EGGw2nUgYBhGaRVXjN9__M5j_gmCEabuswnjsCR7_rBpdlB6CGTEL983oMtaJZHCNJsBk5S8PyBLULTEJNVADV6NnvYPkD3iivV3puPuVjB2TEnh32wqrGMDrMziHN2eFaF4M4BYCrEarm_IlwhcuX9xYLwtxJqez5mDYQrIIC49Trv9mKLc02vKTntW_5AktmDonuhaJGiwtGg0vsk_aI=w1532-h957-no?authuser=1" width="500"> </p>
+
+<p align="center"> <img src="https://lh3.googleusercontent.com/w4lJfmPCExA8wWFqP2MYkcINT-Wzmo2pMmUoS091oNwjDN-RBWww5KU0Va-3CnNkUca6H1VYJmRkqPAKgb8h_p4_qMrXdZmjnh3AZvxtGypeE-GHUYk4ebauNLRx6VjVKzGxRCrdukj_xC14f1zI5cBWRtKqWTucUzaS2P3LjbcFqs6Wb-kuzlM6L0lqSkF3X5vbvX_7RvOSCh73EPh71fqI3AQ4vhUhrAFSCY1ZCOyvdN5yriVsGYmMzO_wTnJ_pFlfOU1g71rljsdc4S8p13jD3E0qtBUz0HgxRTT7NFF38AOCuJC4hveeYak72LbnYMdmKHBGp0I5qZaw3PrGyBj9V9s_ackvIWJzjl31ql89GVR4mjowngFBzhc6IiZIZOzfALQHkpmjbRULnFwDGNosY3ua2MqFQtXuRMiILUuG1X5XconmwuM6WPvrSYLa157Cyjzx67VZcG2RDenwAynZM9F9zKLOAXKMNgZledA2GNKKOuMmYK-t-iDXKxyH_z1wKbpHOWRdpjISxeRltzir8vM_aAwv2Rc6Ndddq7Kwf87cfBmYYJthN11T0WvBl63elp1kJExXNlwha-B-KoatZ34lJtGA8K069yeY9CxE6o8NEp0k-8aMP-1dbac4Vz_QnsILt_Apg0y-lhsZLXXlXpyKKOysWEqM6i3zVg9F4MYEJxfWDY-2F1cHxYBxMIZdxANsy33Rp70Pgrsvp3U7jDS7Fs-m0H4MUfjPYJtqgDcwWwdsX802fPvi-yk5vd0PzNIltHi3x49Cmt31j7AnyuO_msK6LoS7JW8MwfUbQAtJYszHLaG0cdk3yNNetXXb82xVMl3EBbGmgf3ycTuouEw3HVURF3men9S8rOlWLcVLAq1QFgL9hLaBhyfshWaGptLAW_3xDZeatYE3hve0pWgJy4dwUJ30chu0loXmlTDHKmBTcdBKfCxFoL7KlpbQT-i_r-E=w1532-h957-no?authuser=1" width="500"> </p>
+
+<p align="center"> <img src="https://lh3.googleusercontent.com/VSZoGNn5k4MXtQrd4r7BQG4ivRxHbJ0OtfIWV5ts7sgXkz6ElqKFTlMn12_-E42G757I5btjWglHER4Nsj4knV-QNFmU7NeQ5At4xqKOu6uvsdGpkLZcoRrHzlCAz8CTPUkGEG5-MrUpUQQYyYPyUuokndd_80AgUcdErUEDGz3RIVQTdg2v1drU4A7onB_4uy0LB3X9YBV1v7R_J61rQu4XKTiIX8nezb2WfHVkjtNsbnNCrkuNpdqhwrRLLe3datB6WHIY6S5FWYbg3IXCoAVbebIsgPfH15AHlhJ3q16jmS90JULJi2Qb2MsZI7_Pz7LwreNQ5KTb1Skxkl4H6SWVSbJQ00Sw99y4mGXO05-3TGSxYdQPCJ2dmdcGbLJPgEEW17DUGU1Z32gNKG0vYKdaKNbPMdcSD1juHdkSDfdv_Tt7cxwUHQWcrP88t1Km3ILr_2d-xw1OkEDL8gY62wpZwYwVqvALKyWnEarrDSwF3zoIHSlHn6FP97HOjTVMl1E_jGhjhY7DmgrsPnDTa2UqUkHom0hgtB3LbfVvQ55ciLGyUIoVKt2KTwd2YO8bVg-R8BjWQ4qA_zb3mckpGe8BouTto_kdM2jyvjLjO8UxVviNBNUzNsuTLdqt1aApCuwq6uAL3OiFnzsM-ueExV8mO5aFTibC8tf_G__HLVyX_GX-gP65Us_CAeXfdvqkmHFzZftW2Exxu2agu2eEykszv8EGJg7PXVx_aluuI0zzJv1oj9aqBKvxB4OrVcFqix5xHyIvMLwuMlqne_LzK3iRdH2oFoTL9n3E9gK1cem3khm82bm0S-d0Pfi4e3BTOdB4ZVwNglirpBj2AHulWuupWD8BdfNfpl8lDGQn2UChh57AtYTO-w8jHLP9avMt6vxrbfjGDEvp_TUWYxIU-WBHtDASi-Ds1JylQOcpqTHCCYlU8qlrqwyqw2qcNXNFMsU5R3PbNa0=w1532-h957-no?authuser=1" width="500"> </p>
+
+<p align="center"> <img src="https://lh3.googleusercontent.com/Wcxk6nJDCVzHiXcwU-pCGYtAuD_TXrLR2jKWnlReP6g5YrZC1FNnPk6IEhrxhRKUutM5rXcM0zK3wxrgw2XzmSawSWTkNvKZf2HrOSjIZGh2qQ6CmpTwA5XNhx8mhlrzH7ItZ1ZLOGZp35ghPyb64rZs4hHMmdjjO-5booplj9iwrXjCGw_m8JPpqAsXL4f4sALqLQrEG7PbtGs9CC1L3IiIUrKQfPSJe8Fre3Mcmd9oAdSU60AmpbNZJ3aBbwHaO-JyBayrNN-tZNixJXtklv0eXi8ScWIl4FpQ5LhCX63qX6VS2E2Jtjr-8qr5R3VA8ls9-06O_UuHqL0AphOB8Grp7zCCDs17va_zSUkQxquByg7rwCHyWUyfOy6SMQulgs83oYGOXrh4hQt7gzVLSOBEO8BJQtz9-vXTND2PQa4Ds8AdnehcP0skou0s2A6i2jLBWVTFwhTFXij-wbTh29Wr5hLbKMfQ9GU7i89STOg1CvoAsVRGyEuopicfTOeEKLhY7EeBYbmoriuSsrkm6wh4y5w2kJ8ipsIsRedvMdjJ-3e8qsay7cd_DrcWcF3msrazifdEYf_c_DyHGbZoRL7ECQ2ZPEZachHBswfc-nyw5ic-MxQbPitvN5sOYaWcQIyqIX6xXz8Kt4i5jYUQ8z162ftcj883XCXkCjbqKhl1uxbeyU95ImWc3x-9dlpGZxpRQS914mKt2UFSpDQzffS88308Sz-AABJYm1GmXFhY4f6jKMnABqQJLtunLbG6qfHiu7Hqy63iUxhmBhnu7VdE-mXjd68MpyGOYF1lOgj7XZF1WZSM_8YBtX2YPXE7jW9dqZ-HzPZBMWb4FME86myzZ1fW6Dt-6rF_452x40alSuneToucYd-OvujSh4kZitGpAQXcad4kJGm9JddUfE39NaT5zCmf8-Xy8uGPtY2RSnqogqimj2oOgPMoAGHcOx8TczwsyzA=w1532-h957-no?authuser=1" width="500"> </p>
+
+## Todo
+
+ - Add ask discussion on product
+ - Rating on product
+ - Add profile image user
+ - Login using google and facebook
+
